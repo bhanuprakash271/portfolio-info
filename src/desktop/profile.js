@@ -1,8 +1,4 @@
 import React from "react";
-import { saveAs } from "file-saver";
-import Annem from "../resume.pdf";
-import Button from "@mui/material/Button";
-import DownloadIcon from "@mui/icons-material/Download";
 import Grid from '@mui/material/Unstable_Grid2';
 import CardMedia from "@mui/material/CardMedia";
 import profile from "./profile.jpg";
@@ -11,8 +7,6 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import DownloadPDF from "./download";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 
 export default function Profile(props) {
   return (

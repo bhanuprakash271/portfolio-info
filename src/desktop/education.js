@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import { saveAs } from "file-saver";
-import Annem from "../resume.pdf";
 import Button from "@mui/material/Button";
-import DownloadIcon from "@mui/icons-material/Download";
 import Grid from "@mui/material/Unstable_Grid2";
-import { description, skillIcons, socialLinks } from "./../constants";
-import Divider from "@mui/material/Divider";
-import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Card from "@mui/material/Card";
@@ -14,9 +8,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { courseWork } from "../constants";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 
 import ReactCardFlip from "react-card-flip";
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import Grid from '@mui/material/Unstable_Grid2';
 import {
-    navigateCardIcons
+  navigateCardIcons
 } from "./../constants";
 import CardMedia from "@mui/material/CardMedia";
 import Snackbar from "@mui/material/Snackbar";

@@ -3,7 +3,7 @@ import { saveAs } from "file-saver";
 import Annem from '../resume.pdf';
 import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 
 
 export default function DownloadPDF() {

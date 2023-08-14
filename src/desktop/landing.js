@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from "@mui/material/Unstable_Grid2";
 import { socialLinks } from "./../constants";
-import Divider from "@mui/material/Divider";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import Fab from "@mui/material/Fab";
@@ -14,6 +13,7 @@ import Skills from "./skills";
 import Home from "./home";
 import NavigateCard from "./navigateCard";
 import Education from "./education";
+import Recommendation from "./recommendation";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -23,6 +23,7 @@ export default function LandingPage() {
   const [open, setOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [activateSectionNbr, setActivateSectionNbr] = useState(0);
+  const [floatingNavigation, setFloatingNavigation] = useState(false);
 
   const openMenu = () => {
     let value = !showMenu;
@@ -36,6 +37,11 @@ export default function LandingPage() {
 
   const handleSectionNbr = (val) => {
     setActivateSectionNbr(val);
+  };
+
+  const handleFloatingNavigation = () => {
+    setFloatingNavigation(!floatingNavigation);
+    setShowMenu(false);
   };
 
   const handleSocialIcon = (value) => {
@@ -81,24 +87,47 @@ export default function LandingPage() {
           Email Address has copied
         </Alert>
       </Snackbar>
-      <NavigateCard handleSectionNbr={handleSectionNbr}/>
+      {!floatingNavigation && (
+        <NavigateCard
+          handleSectionNbr={handleSectionNbr}
+          activateSectionNbr={activateSectionNbr}
+        />
+      )}
 
-      <Card
-        variant="outlined"
-        sx={{ backgroundColor: "aliceblue", margin: "20px" ,borderRadius:'10px' }}
-      >
-        <CardContent>
-          {/* <Profile/> */}
-          <Grid container spacing={0}>
-            <Grid xs={2}>
-              <Profile handleSocialIconClick={handleSocialIcon} />
-            </Grid>
-            <Grid xs={0.5}>
-              <Divider orientation="vertical" variant="middle" align="center">
-                {" "}
-              </Divider>
-            </Grid>
-            <Grid xs={9.5}>
+      {/* <Profile/> */}
+      <Grid container spacing={0}>
+        <Grid xs={12} md={2}>
+          <Card
+            variant="outlined"
+            sx={{
+              backgroundColor: "aliceblue",
+              margin: "5px",
+              borderRadius: "10px",
+            }}
+          >
+            <CardContent>
+              <Profile
+                handleSocialIconClick={handleSocialIcon}
+                handleFloatingNavigation={handleFloatingNavigation}
+              />
+            </CardContent>
+          </Card>
+        </Grid>
+        {/* <Grid xs={0} md={0.5}>
+          <Divider orientation="vertical" variant="middle" align="center">
+            {" "}
+          </Divider>
+        </Grid> */}
+        <Grid xs={12} md={10}>
+          <Card
+            variant="outlined"
+            sx={{
+              backgroundColor: "aliceblue",
+              margin: "5px",
+              borderRadius: "10px",
+            }}
+          >
+            <CardContent>
               {(activateSectionNbr === 0 || activateSectionNbr === 1) && (
                 <Home />
               )}
@@ -115,34 +144,39 @@ export default function LandingPage() {
                 <Skills />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 6 && (
-                <Skills />
+                <Recommendation />
               )}
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-      {/* {showMenu ? (
-        <Navigate handleMenu={openMenu} handleMenuCard={handleCard} />
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
+      {floatingNavigation ? (
+        <React.Fragment>
+          {showMenu ? (
+            <Navigate handleMenu={openMenu} handleMenuCard={handleCard} />
+          ) : null}
+          <Fab
+            variant="extended"
+            size="small"
+            color="primary"
+            aria-label="add"
+            style={{
+              position: "fixed",
+              bottom: "100px",
+              right: "5%",
+              left: "auto",
+              textTransform: "capitalize",
+              fontFamily: "cursive",
+            }}
+            onClick={() => {
+              openMenu();
+            }}
+          >
+            Navigate <NavigationIcon sx={{ lg: 1 }} />
+          </Fab>
+        </React.Fragment>
       ) : null}
-      <Fab
-        variant="extended"
-        size="small"
-        color="primary"
-        aria-label="add"
-        style={{
-          position: "fixed",
-          bottom: "100px",
-          right: "5%",
-          left: "auto",
-          textTransform: "capitalize",
-          fontFamily: "cursive",
-        }}
-        onClick={() => {
-          openMenu();
-        }}
-      >
-        Navigate <NavigationIcon sx={{ lg: 1 }} />
-      </Fab> */}
     </div>
   );
 }

@@ -29,6 +29,14 @@ export const socialLinks={
       "linkedin":"https://www.linkedin.com/in/veera-bhanu-prakash-reddy-annem-801688154/"
 }
 
+export const socialIcons={
+  "github":"https://img.icons8.com/ios-filled/50/github.png",
+  "mail":"https://img.icons8.com/color/96/gmail-new.png",
+  "linkedin":"https://img.icons8.com/fluency/96/linkedin.png",
+  "address":"https://img.icons8.com/ultraviolet/40/place-marker--v1.png",
+  "phone":"https://img.icons8.com/ultraviolet/40/phone.png"
+}
+
 export const navigateCardIcons={
   "home":"https://img.icons8.com/ultraviolet/80/home--v1.png",
   "education":"https://img.icons8.com/fluency/48/student-male.png",
@@ -43,4 +51,43 @@ export const courseWork=[
   'Machine learning', 'Malware and Software Vulnerability Analysis', 'Operating Systems and File System Forensics', 
   'Cyber Operations Lab', 'Computer Forensics II'
 
+]
+
+
+export const universityLinks={
+  "ucf":"https://www.ucf.edu/",
+  "sathyabama":"https://www.sathyabama.ac.in/"
+}
+
+export const recommendations=[
+  {
+    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    by: "Jaswanth Reddy Manimala",
+    position: "AWS Solutions Architect",
+    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  },
+  {
+    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    by: "Jaswanth Reddy Manimala",
+    position: "AWS Solutions Architect",
+    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  },
+  {
+    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    by: "Jaswanth Reddy Manimala",
+    position: "AWS Solutions Architect",
+    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  },
+  {
+    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    by: "Jaswanth Reddy Manimala",
+    position: "AWS Solutions Architect",
+    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  },
+  {
+    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    by: "Jaswanth Reddy Manimala",
+    position: "AWS Solutions Architect",
+    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  },
 ]

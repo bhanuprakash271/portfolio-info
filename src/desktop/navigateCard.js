@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import IconButton from "@mui/material/IconButton";
-import Grid from '@mui/material/Unstable_Grid2';
-import {
-  navigateCardIcons
-} from "./../constants";
+import Grid from "@mui/material/Unstable_Grid2";
+import { navigateCardIcons } from "./../constants";
 import CardMedia from "@mui/material/CardMedia";
 import Snackbar from "@mui/material/Snackbar";
 import Card from "@mui/material/Card";
@@ -31,7 +29,9 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
 export default function NavigateCard(props) {
   const [vertical, setVertical] = useState("bottom");
   const [horizontal, setHorizontal] = useState("center");
-  const [activeNbr, setActivateNbr] = useState(1);
+  const [activeNbr, setActivateNbr] = useState(
+    props.activateSectionNbr ? props.activateSectionNbr : 1
+  );
 
   const handleNavigateCard = (value) => {
     setActivateNbr(value);
@@ -48,7 +48,11 @@ export default function NavigateCard(props) {
       >
         <Card
           variant="outlined"
-          sx={{ backgroundColor: "aliceblue", width: "100%",borderRadius:'10px' }}
+          sx={{
+            backgroundColor: "aliceblue",
+            width: "100%",
+            borderRadius: "10px",
+          }}
         >
           <Grid
             container
@@ -79,7 +83,9 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{fontFamily: "cursive"}}>{"Home"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Home"}
+                  </Typography>
                 </Stack>
               </IconButton>
             </Grid>
@@ -107,7 +113,9 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{fontFamily: "cursive"}}>{"Experience"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Experience"}
+                  </Typography>
                 </Stack>
               </IconButton>
             </Grid>
@@ -135,7 +143,9 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{fontFamily: "cursive"}}>{"Projects"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Projects"}
+                  </Typography>
                 </Stack>
               </IconButton>
             </Grid>
@@ -163,7 +173,9 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{fontFamily: "cursive"}}>{"Education"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Education"}
+                  </Typography>
                 </Stack>
               </IconButton>
             </Grid>
@@ -191,7 +203,9 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{fontFamily: "cursive"}}>{"Skills"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Skills"}
+                  </Typography>
                 </Stack>
               </IconButton>
             </Grid>
@@ -220,7 +234,9 @@ export default function NavigateCard(props) {
                   />
 
                   {/* <BootstrapTooltip title="Recommendations" placement="top"> */}
-                  <Typography sx={{fontFamily: "cursive"}}>{"Recommendations"}</Typography>
+                  <Typography sx={{ fontFamily: "cursive" }}>
+                    {"Recommendations"}
+                  </Typography>
                   {/* </BootstrapTooltip> */}
                 </Stack>
               </IconButton>

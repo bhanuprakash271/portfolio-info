@@ -1,21 +1,15 @@
 import React from "react";
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from "@mui/material/Unstable_Grid2";
 import CardMedia from "@mui/material/CardMedia";
 import profile from "./profile.jpg";
 import IconButton from "@mui/material/IconButton";
-import { AiFillGithub } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
 import DownloadPDF from "./download";
+import { socialIcons } from "../constants";
+import Button from "@mui/material/Button";
 
 export default function Profile(props) {
   return (
     <React.Fragment>
-       {/* <Card
-        variant="outlined"
-        sx={{ backgroundColor: "antiquewhite",borderRadius:'10px' }}
-      >
-        <CardContent> */}
       <Grid
         container
         direction="column"
@@ -44,47 +38,44 @@ export default function Profile(props) {
             spacing={1}
           >
             <Grid xs={4}>
-              <IconButton>
-                <AiFillLinkedin
-                  style={{
-                    color: "blue",
-                    height: "40px",
-                    width: "40px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => {
-                    props.handleSocialIconClick(1);
-                  }}
+              <IconButton
+                onClick={() => {
+                  props.handleSocialIconClick(1);
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  src={socialIcons.linkedin}
+                  alt="img"
+                  sx={{ height: "40px", width: "40px" }}
                 />
               </IconButton>
             </Grid>
             <Grid xs={4}>
-              <IconButton>
-                <AiOutlineMail
-                  style={{
-                    color: "green",
-                    height: "40px",
-                    width: "40px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => {
-                    props.handleSocialIconClick(2);
-                  }}
+              <IconButton
+                onClick={() => {
+                  props.handleSocialIconClick(2);
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  src={socialIcons.mail}
+                  alt="img"
+                  sx={{ height: "40px", width: "40px" }}
                 />
               </IconButton>
             </Grid>
             <Grid xs={4}>
-              <IconButton>
-                <AiFillGithub
-                  style={{
-                    color: "black",
-                    height: "40px",
-                    width: "40px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => {
-                    props.handleSocialIconClick(3);
-                  }}
+              <IconButton
+                onClick={() => {
+                  props.handleSocialIconClick(3);
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  src={socialIcons.github}
+                  alt="img"
+                  sx={{ height: "40px", width: "40px" }}
                 />
               </IconButton>
             </Grid>
@@ -93,7 +84,7 @@ export default function Profile(props) {
         <Grid item>
           <CardMedia
             component="img"
-            src={"https://img.icons8.com/ultraviolet/40/place-marker--v1.png"}
+            src={socialIcons.address}
             alt="img"
             sx={{ height: "40px", width: "40px" }}
           />
@@ -107,7 +98,7 @@ export default function Profile(props) {
         <Grid item>
           <CardMedia
             component="img"
-            src={"https://img.icons8.com/ultraviolet/40/phone.png"}
+            src={socialIcons.phone}
             alt="img"
             sx={{ height: "30px", width: "30px" }}
           />
@@ -121,8 +112,18 @@ export default function Profile(props) {
         <Grid item sx={{ marginTop: "10px" }}>
           <DownloadPDF />
         </Grid>
+        <Grid item sx={{ marginTop: "10px" }}>
+          <Button
+            sx={{ textTransform: "capitalize", fontFamily: "cursive" }}
+            onClick={() => {
+              props.handleFloatingNavigation();
+            }}
+            variant="contained"
+          >
+            Change Navigation
+          </Button>
+        </Grid>
       </Grid>
-      {/* </CardContent></Card> */}
     </React.Fragment>
   );
 }

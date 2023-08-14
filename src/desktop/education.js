@@ -7,7 +7,11 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { courseWork } from "../constants";
+import { courseWork,universityLinks } from "../constants";
+import CardMedia from "@mui/material/CardMedia";
+import ucf from "./ucf.png";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import sathyabama from "./sathyabama.png";
 
 import ReactCardFlip from "react-card-flip";
 
@@ -24,6 +28,18 @@ export default function Education() {
   const [flipOne, setFlipOne] = useState(false);
   const [flipTwo, setFlipTwo] = useState(false);
 
+
+  const handleUniversityLinks = (value) => {
+    let URL = "";
+    if (value === 1) {
+      URL = universityLinks.ucf;
+    } else if (value === 2) {
+      URL = universityLinks.sathyabama;
+    }
+   
+    window.open(URL);
+  };
+
   return (
     <React.Fragment>
       <Grid
@@ -31,50 +47,132 @@ export default function Education() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={12}
+        spacing={{ xs: 2, md: 3 }}
       >
-        <Grid xs={6}>
-          <Paper elevation={3}>
-            <Card sx={{ minHeight: "350px" }}>
-              <ReactCardFlip isFlipped={flipOne} flipDirection="vertical">
+        <Grid xs={12} md={6}>
+          <ReactCardFlip
+            isFlipped={flipOne}
+            flipDirection="horizontal"
+            infinite="true"
+          >
+            <Paper elevation={3}>
+              <Card
+                sx={{
+                 // backgroundColor: "lightgoldenrodyellow",
+                  minHeight: "300px",
+                }}
+              >
                 <React.Fragment>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                    >
-                      {"University of Central Florida"}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Grid
-                      container
-                      spacing={2}
-                      sx={{ width: "100%" }}
-                    >
-                      <Grid xs={6} align="right">
-                        <Button
-                          size="small"
-                          variant="outlined"
-                          // onClick={() => setFlipOne(!flipOne)}
-                        >
-                          website
-                        </Button>
-                      </Grid>
-                      <Grid xs={6} align="left">
-                        <Button
-                          size="small"
-                          variant="outlined"
-                          onClick={() => setFlipOne(!flipOne)}
-                        >
-                        Course Work
-                        </Button>
-                      </Grid>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                  >
+                    {" "}
+                    <Grid xs={4}>
+                      <CardMedia
+                        sx={{
+                          height: 100,
+                          width: 100,
+                          objectFit: "contain",
+                          objectPosition: "bottom",
+                        }}
+                        image={ucf}
+                        title="UCF"
+                      />
                     </Grid>
-                  </CardActions>
+                    <Grid xs={8}>
+                      <CardActions>
+                        <Grid
+                          container
+                          spacing={2}
+                          justifyContent="flex-end"
+                          alignItems="flex-end"
+                          sx={{ width: "100%" }}
+                        >
+                          <Grid>
+                            <Button
+                              size="small"
+                              variant="outlined"
+                              onClick={() => setFlipOne(!flipOne)}
+                              sx={{
+                                textTransform: "capitalize",
+                                fontSize: 14,
+                                fontFamily: "cursive",
+                              }}
+                            >
+                              Course Work
+                            </Button>
+                          </Grid>
+                          <Grid>
+                            <Button
+                              sx={{
+                                textTransform: "capitalize",
+                                fontSize: 14,
+                                fontFamily: "cursive",
+                              }}
+                              size="small"
+                              variant="outlined"
+                              endIcon={<OpenInNewIcon />}
+                              onClick={()=>{handleUniversityLinks(1)}}
+                            >
+                              website
+                            </Button>
+                          </Grid>
+                        </Grid>
+                      </CardActions>
+                    </Grid>
+                    <Grid xs={12}>
+                      <CardContent>
+                        <Grid
+                          container
+                          direction="column"
+                          justifyContent="flex-start"
+                          alignItems="flex-start"
+                          spacing={1}
+                        >
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{
+                                fontSize: 18,
+                                fontFamily: "cursive",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {"Master of Science in Computer Science"}
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"University of Central Florida"}
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"CGPA: 4"}
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"Graduation Year: 2023 (Expected)"}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
                 </React.Fragment>
-
+              </Card>
+            </Paper>
+            <Paper elevation={3}>
+              <Card sx={{ minHeight: "300px" }}>
                 <React.Fragment>
                   <CardContent>
                     {courseWork.map((item) => {
@@ -87,8 +185,11 @@ export default function Education() {
                           spacing={3}
                         >
                           <Grid xs={12}>
-                            <Typography sx={{ fontSize: 14 }}>
-                              {bull}{" " + item}
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {bull}
+                              {" " + item}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -109,6 +210,11 @@ export default function Education() {
                           size="small"
                           variant="outlined"
                           onClick={() => setFlipOne(!flipOne)}
+                          sx={{
+                            textTransform: "capitalize",
+                            fontSize: 14,
+                            fontFamily: "cursive",
+                          }}
                         >
                           Go Back
                         </Button>
@@ -116,51 +222,184 @@ export default function Education() {
                     </Grid>
                   </CardActions>
                 </React.Fragment>
-              </ReactCardFlip>
-            </Card>
-          </Paper>
+              </Card>
+            </Paper>
+          </ReactCardFlip>
         </Grid>
 
-        {/* <Grid xs={6}>
-          <Paper elevation={3}>
-            <Card>
-              <ReactCardFlip isFlipped={flipTwo} flipDirection="vertical">
+        <Grid xs={12} md={6}>
+          <ReactCardFlip
+            isFlipped={flipTwo}
+            flipDirection="horizontal"
+            infinite="true"
+          >
+            <Paper elevation={3}>
+              <Card
+                sx={{
+                 // backgroundColor: "lightgoldenrodyellow",
+                  minHeight: "300px",
+                }}
+              >
+                <React.Fragment>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                  >
+                    {" "}
+                    <Grid xs={4}>
+                      <CardMedia
+                        sx={{
+                          height: 100,
+                          width: 100,
+                          objectFit: "contain",
+                          objectPosition: "bottom",
+                        }}
+                        image={sathyabama}
+                        title="Sathyabama"
+                      />
+                    </Grid>
+                    <Grid xs={8}>
+                      <CardActions>
+                        <Grid container spacing={2} sx={{ width: "100%" }}>
+                          <Grid xs={12} align="right">
+                            <Button
+                              sx={{
+                                textTransform: "capitalize",
+                                fontSize: 14,
+                                fontFamily: "cursive",
+                              }}
+                              size="small"
+                              variant="outlined"
+                              endIcon={<OpenInNewIcon />}
+                              onClick={()=>{handleUniversityLinks(2)}}
+                            >
+                              website
+                            </Button>
+                          </Grid>
+                          {/* <Grid xs={6} align="left">
+                            <Button
+                              size="small"
+                              variant="outlined"
+                              onClick={() => setFlipTwo(!flipTwo)}
+                              sx={{
+                                textTransform: "capitalize",
+                                fontSize: 14,
+                                fontFamily: "cursive",
+                              }}
+                            >
+                              Course Work
+                            </Button>
+                          </Grid> */}
+                        </Grid>
+                      </CardActions>
+                    </Grid>
+                    <Grid xs={12}>
+                      <CardContent>
+                        <Grid
+                          container
+                          direction="column"
+                          justifyContent="flex-start"
+                          alignItems="flex-start"
+                          spacing={1}
+                        >
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{
+                                fontSize: 18,
+                                fontFamily: "cursive",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {
+                                "Bachelor of Engineering in Electronics and Communications"
+                              }
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"Sathyabama University"}
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"CGPA: 4"}
+                            </Typography>
+                          </Grid>
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {"Graduation Year: 2017"}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
+                </React.Fragment>
+              </Card>
+            </Paper>
+            <Paper elevation={3}>
+              <Card sx={{ minHeight: "300px" }}>
                 <React.Fragment>
                   <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                    >
-                      {"Sathyabama University"}
-                    </Typography>
+                    {courseWork.map((item) => {
+                      return (
+                        <Grid
+                          container
+                          direction="column"
+                          justifyContent="center"
+                          alignItems="center"
+                          spacing={3}
+                        >
+                          <Grid xs={12}>
+                            <Typography
+                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                            >
+                              {bull}
+                              {" " + item}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      );
+                    })}
                   </CardContent>
                   <CardActions>
-                    <Button size="small" onClick={() => setFlipTwo(!flipTwo)}>
-                      View Course Work
-                    </Button>
-                  </CardActions>
-                </React.Fragment>
-                <React.Fragment>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
+                    <Grid
+                      container
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center"
+                      spacing={2}
+                      sx={{ width: "100%" }}
                     >
-                      {"Courses"}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" onClick={() => setFlipTwo(!flipTwo)}>
-                      Go Back
-                    </Button>
+                      <Grid xs={12} align="center">
+                        <Button
+                          size="small"
+                          variant="outlined"
+                          onClick={() => setFlipTwo(!flipTwo)}
+                          sx={{
+                            textTransform: "capitalize",
+                            fontSize: 14,
+                            fontFamily: "cursive",
+                          }}
+                        >
+                          Go Back
+                        </Button>
+                      </Grid>
+                    </Grid>
                   </CardActions>
                 </React.Fragment>
-              </ReactCardFlip>
-            </Card>
-          </Paper>
-        </Grid> */}
+              </Card>
+            </Paper>
+          </ReactCardFlip>
+        </Grid>
       </Grid>
     </React.Fragment>
   );

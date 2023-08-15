@@ -98,7 +98,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(1);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                       Home
                     </MenuItem>
@@ -107,7 +107,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(2);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                      Experience
                     </MenuItem>
@@ -116,7 +116,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(3);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                       Projects
                     </MenuItem>
@@ -125,7 +125,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(4);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                       Education
                     </MenuItem>
@@ -134,7 +134,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(5);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                       Skills
                     </MenuItem>
@@ -143,7 +143,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(6);
                       }}
-                      sx={{fontFamily:"cursive"}}
+                      sx={{fontFamily:`'jost', sans-serif`}}
                     >
                       Recommendations
                     </MenuItem>

@@ -16,7 +16,7 @@ export default function DownloadPDF() {
     return (
         <Grid container spacing={2}>
             <Grid item align='right' xs={12}>
-                <Button  sx={{textTransform:"capitalize",fontFamily:"cursive"}} onClick={saveFile} variant="contained" endIcon={<DownloadIcon />}>resume</Button>
+                <Button  sx={{textTransform:"capitalize",fontFamily:`'jost', sans-serif`}} onClick={saveFile} variant="contained" endIcon={<DownloadIcon />}>resume</Button>
             </Grid>
         </Grid>
     );

@@ -91,7 +91,7 @@ export default function Profile(props) {
         </Grid>
         <Grid
           item
-          sx={{ textAlign: "center", fontFamily: "cursive", fontSize: "15px" }}
+          sx={{ textAlign: "center", fontFamily: `'jost', sans-serif`, fontSize: "15px" }}
         >
           1350 San Remo Point, Florida, United States - 32765.
         </Grid>
@@ -105,7 +105,7 @@ export default function Profile(props) {
         </Grid>
         <Grid
           item
-          sx={{ textAlign: "center", fontFamily: "cursive", fontSize: "15px" }}
+          sx={{ textAlign: "center", fontFamily: `'jost', sans-serif`, fontSize: "15px" }}
         >
           {"(469) 861-5322"}
         </Grid>
@@ -114,7 +114,7 @@ export default function Profile(props) {
         </Grid>
         <Grid item sx={{ marginTop: "10px" }}>
           <Button
-            sx={{ textTransform: "capitalize", fontFamily: "cursive" }}
+            sx={{ textTransform: "capitalize", fontFamily: `'jost', sans-serif` }}
             onClick={() => {
               props.handleFloatingNavigation();
             }}

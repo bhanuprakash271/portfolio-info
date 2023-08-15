@@ -14,6 +14,8 @@ import Home from "./home";
 import NavigateCard from "./navigateCard";
 import Education from "./education";
 import Recommendation from "./recommendation";
+//import NavigateCardTwo from "./navigateCradTwo";
+import Projects from "./projects";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -82,7 +84,7 @@ export default function LandingPage() {
             handleSnackBarClose();
           }}
           severity="success"
-          sx={{ width: "100%", fontFamily: "cursive" }}
+          sx={{ width: "100%", fontFamily: `'jost', sans-serif` }}
         >
           Email Address has copied
         </Alert>
@@ -128,6 +130,12 @@ export default function LandingPage() {
             }}
           >
             <CardContent>
+              {/* {!floatingNavigation && (
+                <NavigateCardTwo
+                  handleSectionNbr={handleSectionNbr}
+                  activateSectionNbr={activateSectionNbr}
+                />
+              )} */}
               {(activateSectionNbr === 0 || activateSectionNbr === 1) && (
                 <Home />
               )}
@@ -135,7 +143,7 @@ export default function LandingPage() {
                 <Skills />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 3 && (
-                <Skills />
+                <Projects />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 4 && (
                 <Education />
@@ -167,7 +175,7 @@ export default function LandingPage() {
               right: "5%",
               left: "auto",
               textTransform: "capitalize",
-              fontFamily: "cursive",
+              fontFamily: `'jost', sans-serif`,
             }}
             onClick={() => {
               openMenu();

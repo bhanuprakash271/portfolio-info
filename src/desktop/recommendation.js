@@ -16,7 +16,6 @@ import { socialIcons, recommendations } from "../constants";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 
-
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;
 
@@ -71,7 +70,7 @@ function Recommendation() {
             enableMouseEvents
           >
             {recommendations.map((step, index) => (
-              <div key={step.text}>
+              <div key={index}>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Card sx={{ minHeight: "300px", backgroundColor: "beige" }}>
                     <CardContent>
@@ -84,21 +83,30 @@ function Recommendation() {
                       >
                         <Grid xs={12}>
                           <Typography
-                            sx={{ fontSize: 20, fontFamily: "cursive" }}
+                            sx={{
+                              fontSize: 20,
+                              fontFamily: `'jost', sans-serif`,
+                            }}
                           >
                             {step.text}
                           </Typography>
                         </Grid>
                         <Grid xs={12} align="right">
                           <Typography
-                            sx={{ fontSize: 20, fontFamily: "cursive" }}
+                            sx={{
+                              fontSize: 20,
+                              fontFamily: `'jost', sans-serif`,
+                            }}
                           >
                             {"- " + step.by}
                           </Typography>
                         </Grid>
                         <Grid xs={12} align="right">
                           <Typography
-                            sx={{ fontSize: 20, fontFamily: "cursive" }}
+                            sx={{
+                              fontSize: 20,
+                              fontFamily: `'jost', sans-serif`,
+                            }}
                           >
                             {step.position}
                           </Typography>
@@ -124,6 +132,7 @@ function Recommendation() {
               </div>
             ))}
           </AutoPlaySwipeableViews>
+
           <MobileStepper
             steps={maxSteps}
             position="static"
@@ -170,27 +179,75 @@ function Recommendation() {
               spacing={2}
             >
               <Grid xs={12}>
-                <Typography sx={{ fontSize: 20, fontFamily: "cursive" }}>
+                <Typography
+                  sx={{ fontSize: 20, fontFamily: `'jost', sans-serif` }}
+                >
                   {"Recommend Me"}
                 </Typography>
               </Grid>
               <Grid xs={12}>
-              <Divider />
+                <Divider />
               </Grid>
               <Grid xs={12}>
-                <TextField label="Name" variant="outlined" fullWidth />
+                <TextField
+                  label="Name"
+                  variant="outlined"
+                  fullWidth
+                  InputLabelProps={{
+                    sx: {
+                      fontFamily: `'jost', sans-serif`,
+                    },
+                  }}
+                />
               </Grid>
               <Grid xs={12}>
-                <TextField label="Position" variant="outlined" fullWidth />
+                <TextField
+                  label="Position"
+                  variant="outlined"
+                  fullWidth
+                  InputLabelProps={{
+                    sx: {
+                      fontFamily: `'jost', sans-serif`,
+                    },
+                  }}
+                />
               </Grid>
               <Grid xs={12}>
-                <TextField label="Linkedin" variant="outlined" fullWidth />
+                <TextField
+                  label="Linkedin"
+                  variant="outlined"
+                  fullWidth
+                  InputLabelProps={{
+                    sx: {
+                      fontFamily: `'jost', sans-serif`,
+                    },
+                  }}
+                />
               </Grid>
               <Grid xs={12}>
-                <TextField label="Description" variant="outlined" fullWidth multiline rows={4}/>
+                <TextField
+                  label="Description"
+                  variant="outlined"
+                  fullWidth
+                  multiline
+                  rows={4}
+                  InputLabelProps={{
+                    sx: {
+                      fontFamily: `'jost', sans-serif`,
+                    },
+                  }}
+                />
               </Grid>
-              <Grid xs={12} align='center'>
-              <Button  sx={{textTransform:"capitalize",fontFamily:"cursive"}} variant="contained">Submit</Button>
+              <Grid xs={12} align="center">
+                <Button
+                  sx={{
+                    textTransform: "capitalize",
+                    fontFamily: `'jost', sans-serif`,
+                  }}
+                  variant="contained"
+                >
+                  Submit
+                </Button>
               </Grid>
             </Grid>
           </CardContent>
@@ -201,4 +258,3 @@ function Recommendation() {
 }
 
 export default Recommendation;
-

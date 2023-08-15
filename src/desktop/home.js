@@ -47,7 +47,7 @@ export default function Home() {
                   fontSize: "30px",
                   fontWeight: "bold",
                   margin: "10px",
-                  fontFamily: "cursive",
+                  fontFamily: `'jost', sans-serif`,
                 }}
               >
                 {"Welcome to my portfolio"}
@@ -59,7 +59,7 @@ export default function Home() {
                   fontSize: "25px",
                   fontWeight: "bold",
                   margin: "10px",
-                  fontFamily: "cursive",
+                  fontFamily: `'jost', sans-serif`,
                 }}
               >
                 {"know more"}
@@ -72,7 +72,7 @@ export default function Home() {
             fontSize: "25px",
             fontWeight: "bold",
             margin: "10px",
-            fontFamily: "cursive",
+            fontFamily: `'jost', sans-serif`,
           }}
         >
           {"I am Veera, a "}
@@ -84,7 +84,7 @@ export default function Home() {
             fontSize: "20px",
             margin: "10px",
             textAlign: "justify",
-            fontFamily: "cursive",
+            fontFamily: `'jost', sans-serif`,
           }}
         >
           {description}

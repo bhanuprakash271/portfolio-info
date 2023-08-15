@@ -26,7 +26,7 @@ const BootstrapTooltip = styled(({ className, ...props }) => (
   },
 }));
 
-export default function NavigateCard(props) {
+export default function NavigateCardTwo(props) {
   const [vertical, setVertical] = useState("bottom");
   const [horizontal, setHorizontal] = useState("center");
   const [activeNbr, setActivateNbr] = useState(
@@ -40,12 +40,12 @@ export default function NavigateCard(props) {
 
   return (
     <React.Fragment>
-      <Snackbar
+      {/* <Snackbar
         anchorOrigin={{ vertical, horizontal }}
         open={true}
         sx={{ minWidth: "60%", maxWidth: "70%" }}
         TransitionComponent={TransitionLeft}
-      >
+      > */}
         <Card
           variant="outlined"
           sx={{
@@ -243,7 +243,7 @@ export default function NavigateCard(props) {
             </Grid>
           </Grid>
         </Card>
-      </Snackbar>
+      {/* </Snackbar> */}
     </React.Fragment>
   );
 }

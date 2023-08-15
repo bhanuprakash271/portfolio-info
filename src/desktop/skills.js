@@ -43,7 +43,7 @@ export default function Skills() {
             onClick={() => {
               handleSwitchChange();
             }}
-            sx={{ margin: "10px", fontSize: "15px", fontFamily: "cursive" }}
+            sx={{ margin: "10px", fontSize: "15px", fontFamily: `'jost', sans-serif` }}
           />
         </Grid>
       </Grid>
@@ -61,7 +61,7 @@ export default function Skills() {
               id="panel1a-header"
               sx={{ backgroundColor: "lightgreen", minHeight: "50px" }}
             >
-              <Typography sx={{ fontSize: "15px", fontFamily: "cursive" }}>
+              <Typography sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}>
                 {skill}
               </Typography>
             </AccordionSummary>

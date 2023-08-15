@@ -99,7 +99,7 @@ export default function Education() {
                               sx={{
                                 textTransform: "capitalize",
                                 fontSize: 14,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                               }}
                             >
                               Course Work
@@ -110,7 +110,7 @@ export default function Education() {
                               sx={{
                                 textTransform: "capitalize",
                                 fontSize: 14,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                               }}
                               size="small"
                               variant="outlined"
@@ -136,7 +136,7 @@ export default function Education() {
                             <Typography
                               sx={{
                                 fontSize: 18,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                                 fontWeight: "bold",
                               }}
                             >
@@ -145,21 +145,21 @@ export default function Education() {
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"University of Central Florida"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"CGPA: 4"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"Graduation Year: 2023 (Expected)"}
                             </Typography>
@@ -186,7 +186,7 @@ export default function Education() {
                         >
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {bull}
                               {" " + item}
@@ -213,7 +213,7 @@ export default function Education() {
                           sx={{
                             textTransform: "capitalize",
                             fontSize: 14,
-                            fontFamily: "cursive",
+                            fontFamily: `'jost', sans-serif`,
                           }}
                         >
                           Go Back
@@ -268,7 +268,7 @@ export default function Education() {
                               sx={{
                                 textTransform: "capitalize",
                                 fontSize: 14,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                               }}
                               size="small"
                               variant="outlined"
@@ -286,7 +286,7 @@ export default function Education() {
                               sx={{
                                 textTransform: "capitalize",
                                 fontSize: 14,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                               }}
                             >
                               Course Work
@@ -308,7 +308,7 @@ export default function Education() {
                             <Typography
                               sx={{
                                 fontSize: 18,
-                                fontFamily: "cursive",
+                                fontFamily: `'jost', sans-serif`,
                                 fontWeight: "bold",
                               }}
                             >
@@ -319,21 +319,21 @@ export default function Education() {
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"Sathyabama University"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"CGPA: 4"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {"Graduation Year: 2017"}
                             </Typography>
@@ -360,7 +360,7 @@ export default function Education() {
                         >
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: "cursive" }}
+                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
                             >
                               {bull}
                               {" " + item}
@@ -387,7 +387,7 @@ export default function Education() {
                           sx={{
                             textTransform: "capitalize",
                             fontSize: 14,
-                            fontFamily: "cursive",
+                            fontFamily: `'jost', sans-serif`,
                           }}
                         >
                           Go Back

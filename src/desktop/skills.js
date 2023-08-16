@@ -9,9 +9,9 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Chip from "@mui/material/Chip";
 
-export default function Skills() {
+export default function Skills(props) {
   const skills = ["Programming Skills", "Tools/IDE", "Databases", "Frameworks"];
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(props.isMobile ? false : true);
   const [showSkillIndex, setShowSkillIndex] = useState(null);
 
   const handleSwitchChange = () => {
@@ -43,7 +43,11 @@ export default function Skills() {
             onClick={() => {
               handleSwitchChange();
             }}
-            sx={{ margin: "10px", fontSize: "15px", fontFamily: `'jost', sans-serif` }}
+            sx={{
+              margin: "10px",
+              fontSize: "15px",
+              fontFamily: `'jost', sans-serif`,
+            }}
           />
         </Grid>
       </Grid>
@@ -61,7 +65,9 @@ export default function Skills() {
               id="panel1a-header"
               sx={{ backgroundColor: "lightgreen", minHeight: "50px" }}
             >
-              <Typography sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}>
+              <Typography
+                sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}
+              >
                 {skill}
               </Typography>
             </AccordionSummary>

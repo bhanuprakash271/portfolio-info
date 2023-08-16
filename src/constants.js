@@ -131,3 +131,30 @@ export const projectContent = [
     github: "https://github.com/bhanuprakash271/ML-Assignments",
   },
 ];
+
+export const experience = [
+  {
+    year: "2022 - Current",
+    company: "University Of Central Florida",
+    position: "Graduate Teaching Assistant",
+    location: "Orlando",
+    description: [
+      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting Professors.",
+      "Conducted in-person lab sessions, proctored exams, and advised students on Database Concepts, Web Based Information Technology, and Programming in C.",
+    ],
+  },
+  {
+    year: "2019 - 2021",
+    company: "Infosys",
+    position: "Senior System Analyst",
+    location: "Hyderabad",
+    description: ["Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.", "Built user interface with React JS and Redux, while implementing backend services developed in Java.", "Actively participated in Scrum calls with business analysts to decipher the requirements and identify key areas for improvement to enhance user experience further.","Employed Express JS, and GraphQL to help develop and manage the Academy application efficiently."],
+  },
+  {
+    year: "2017 - 2019",
+    company: "Infosys",
+    position: "Technology Analyst",
+    location: "Chennai",
+    description: ["Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.", "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.", "Developed API services in Node JS using graphql to store and fetch data from MySql DB."],
+  },
+];

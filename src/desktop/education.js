@@ -7,27 +7,16 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { courseWork,universityLinks } from "../constants";
+import { courseWork, universityLinks } from "../constants";
 import CardMedia from "@mui/material/CardMedia";
 import ucf from "./ucf.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import sathyabama from "./sathyabama.png";
-
 import ReactCardFlip from "react-card-flip";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
 
 export default function Education() {
   const [flipOne, setFlipOne] = useState(false);
   const [flipTwo, setFlipTwo] = useState(false);
-
 
   const handleUniversityLinks = (value) => {
     let URL = "";
@@ -36,7 +25,7 @@ export default function Education() {
     } else if (value === 2) {
       URL = universityLinks.sathyabama;
     }
-   
+
     window.open(URL);
   };
 
@@ -58,7 +47,7 @@ export default function Education() {
             <Paper elevation={3}>
               <Card
                 sx={{
-                 // backgroundColor: "lightgoldenrodyellow",
+                  // backgroundColor: "lightgoldenrodyellow",
                   minHeight: "300px",
                 }}
               >
@@ -115,7 +104,9 @@ export default function Education() {
                               size="small"
                               variant="outlined"
                               endIcon={<OpenInNewIcon />}
-                              onClick={()=>{handleUniversityLinks(1)}}
+                              onClick={() => {
+                                handleUniversityLinks(1);
+                              }}
                             >
                               website
                             </Button>
@@ -145,21 +136,30 @@ export default function Education() {
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"University of Central Florida"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"CGPA: 4"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"Graduation Year: 2023 (Expected)"}
                             </Typography>
@@ -186,10 +186,14 @@ export default function Education() {
                         >
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
-                              {bull}
-                              {" " + item}
+                              <ul style={{ margin: "0px" }}>
+                                <li>{item}</li>
+                              </ul>
                             </Typography>
                           </Grid>
                         </Grid>
@@ -236,7 +240,7 @@ export default function Education() {
             <Paper elevation={3}>
               <Card
                 sx={{
-                 // backgroundColor: "lightgoldenrodyellow",
+                  // backgroundColor: "lightgoldenrodyellow",
                   minHeight: "300px",
                 }}
               >
@@ -273,7 +277,9 @@ export default function Education() {
                               size="small"
                               variant="outlined"
                               endIcon={<OpenInNewIcon />}
-                              onClick={()=>{handleUniversityLinks(2)}}
+                              onClick={() => {
+                                handleUniversityLinks(2);
+                              }}
                             >
                               website
                             </Button>
@@ -319,21 +325,30 @@ export default function Education() {
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"Sathyabama University"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"CGPA: 4"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
                               {"Graduation Year: 2017"}
                             </Typography>
@@ -360,10 +375,14 @@ export default function Education() {
                         >
                           <Grid xs={12}>
                             <Typography
-                              sx={{ fontSize: 14, fontFamily: `'jost', sans-serif` }}
+                              sx={{
+                                fontSize: 14,
+                                fontFamily: `'jost', sans-serif`,
+                              }}
                             >
-                              {bull}
-                              {" " + item}
+                              <ul style={{ margin: "0px" }}>
+                                <li>{item}</li>
+                              </ul>
                             </Typography>
                           </Grid>
                         </Grid>

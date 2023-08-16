@@ -16,6 +16,9 @@ import Education from "./education";
 import Recommendation from "./recommendation";
 //import NavigateCardTwo from "./navigateCradTwo";
 import Projects from "./projects";
+import Experience from './experience';
+import {isMobile} from 'react-device-detect';
+
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -25,7 +28,7 @@ export default function LandingPage() {
   const [open, setOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [activateSectionNbr, setActivateSectionNbr] = useState(0);
-  const [floatingNavigation, setFloatingNavigation] = useState(false);
+  const [floatingNavigation, setFloatingNavigation] = useState(isMobile ? true : false);
 
   const openMenu = () => {
     let value = !showMenu;
@@ -120,7 +123,7 @@ export default function LandingPage() {
             {" "}
           </Divider>
         </Grid> */}
-        <Grid xs={12} md={10}>
+        <Grid xs={12} md={10} sx={{marginBottom:'100px'}}>
           <Card
             variant="outlined"
             sx={{
@@ -140,7 +143,7 @@ export default function LandingPage() {
                 <Home />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 2 && (
-                <Skills />
+                <Experience />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 3 && (
                 <Projects />
@@ -149,7 +152,7 @@ export default function LandingPage() {
                 <Education />
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 5 && (
-                <Skills />
+                <Skills isMobile={isMobile}/>
               )}
               {activateSectionNbr !== 0 && activateSectionNbr === 6 && (
                 <Recommendation />

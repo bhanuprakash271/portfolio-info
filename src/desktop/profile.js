@@ -187,7 +187,7 @@ export default function Profile(props) {
         <Grid item sx={{ marginTop: "10px" }}>
           <DownloadPDF />
         </Grid>
-        <Grid item sx={{ marginTop: "10px" }}>
+        {/* <Grid item sx={{ marginTop: "10px" }}>
           <Button
             sx={{
               textTransform: "capitalize",
@@ -200,7 +200,7 @@ export default function Profile(props) {
           >
             Change Navigation
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
     </React.Fragment>
   );

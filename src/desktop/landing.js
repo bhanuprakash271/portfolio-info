@@ -16,9 +16,10 @@ import Education from "./education";
 import Recommendation from "./recommendation";
 //import NavigateCardTwo from "./navigateCradTwo";
 import Projects from "./projects";
-import Experience from './experience';
-import {isMobile} from 'react-device-detect';
-
+import Experience from "./experience";
+import { isMobile } from "react-device-detect";
+import Divider from "@mui/material/Divider";
+import Chip from "@mui/material/Chip";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -27,8 +28,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export default function LandingPage() {
   const [open, setOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [activateSectionNbr, setActivateSectionNbr] = useState(0);
-  const [floatingNavigation, setFloatingNavigation] = useState(isMobile ? true : false);
+  const [activateSectionNbr, setActivateSectionNbr] = useState(1);
+  const [floatingNavigation, setFloatingNavigation] = useState(
+    isMobile ? true : false
+  );
 
   const openMenu = () => {
     let value = !showMenu;
@@ -38,6 +41,9 @@ export default function LandingPage() {
   const handleCard = (nbr) => {
     setShowMenu(false);
     handleSectionNbr(nbr);
+    // to scroll
+    var elmnt = document.getElementById(nbr);
+    elmnt.scrollIntoView();
   };
 
   const handleSectionNbr = (val) => {
@@ -101,6 +107,7 @@ export default function LandingPage() {
 
       {/* <Profile/> */}
       <Grid container spacing={0}>
+        {/* {((isMobile && activateSectionNbr === 1) || !isMobile) && ( */}
         <Grid xs={12} md={2}>
           <Card
             variant="outlined"
@@ -118,48 +125,157 @@ export default function LandingPage() {
             </CardContent>
           </Card>
         </Grid>
+        {/* )} */}
         {/* <Grid xs={0} md={0.5}>
           <Divider orientation="vertical" variant="middle" align="center">
             {" "}
           </Divider>
         </Grid> */}
-        <Grid xs={12} md={10} sx={{marginBottom:'100px'}}>
-          <Card
-            variant="outlined"
-            sx={{
-              backgroundColor: "aliceblue",
-              margin: "5px",
-              borderRadius: "10px",
-            }}
-          >
-            <CardContent>
-              {/* {!floatingNavigation && (
+        {isMobile ? (
+          <Grid xs={12} md={10} sx={{ marginBottom: "100px" }}>
+            <Card
+              variant="outlined"
+              sx={{
+                backgroundColor: "aliceblue",
+                margin: "5px",
+                borderRadius: "10px",
+              }}
+            >
+              <CardContent>
+                <div id="1">
+                  <Home />
+                </div>
+
+                <div id="2">
+                  <Divider
+                    variant="middle"
+                    align="center"
+                    sx={{ margin: "20px" }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      color="info"
+                      label="Experience"
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        //margin: "5px",
+                        fontWeight: 500,
+                      }}
+                    />
+                  </Divider>
+
+                  <Experience />
+                </div>
+                <div id="3">
+                  <Divider
+                    variant="middle"
+                    align="center"
+                    sx={{ margin: "20px" }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      color="info"
+                      label="Projects"
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        //margin: "5px",
+                        fontWeight: 500,
+                      }}
+                    />
+                  </Divider>
+
+                  <Projects />
+                </div>
+                <div id="4">
+                  <Divider
+                    variant="middle"
+                    align="center"
+                    sx={{ margin: "20px" }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      color="info"
+                      label="Education"
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        //margin: "5px",
+                        fontWeight: 500,
+                      }}
+                    />
+                  </Divider>
+
+                  <Education />
+                </div>
+                <div id="5">
+                  <Divider
+                    variant="middle"
+                    align="center"
+                    sx={{ margin: "20px" }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      color="info"
+                      label="Skills"
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        //margin: "5px",
+                        fontWeight: 500,
+                      }}
+                    />
+                  </Divider>
+
+                  <Skills isMobile={isMobile} />
+                </div>
+                <div id="6">
+                  <Divider
+                    variant="middle"
+                    align="center"
+                    sx={{ margin: "20px" }}
+                  >
+                    <Chip
+                      variant="outlined"
+                      color="info"
+                      label="Recommendations"
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        //margin: "5px",
+                        fontWeight: 500,
+                      }}
+                    />
+                  </Divider>
+
+                  <Recommendation />
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+        ) : (
+          <Grid xs={12} md={10} sx={{ marginBottom: "100px" }}>
+            <Card
+              variant="outlined"
+              sx={{
+                backgroundColor: "aliceblue",
+                margin: "5px",
+                borderRadius: "10px",
+              }}
+            >
+              <CardContent>
+                {/* {!floatingNavigation && (
                 <NavigateCardTwo
                   handleSectionNbr={handleSectionNbr}
                   activateSectionNbr={activateSectionNbr}
                 />
               )} */}
-              {(activateSectionNbr === 0 || activateSectionNbr === 1) && (
-                <Home />
-              )}
-              {activateSectionNbr !== 0 && activateSectionNbr === 2 && (
-                <Experience />
-              )}
-              {activateSectionNbr !== 0 && activateSectionNbr === 3 && (
-                <Projects />
-              )}
-              {activateSectionNbr !== 0 && activateSectionNbr === 4 && (
-                <Education />
-              )}
-              {activateSectionNbr !== 0 && activateSectionNbr === 5 && (
-                <Skills isMobile={isMobile}/>
-              )}
-              {activateSectionNbr !== 0 && activateSectionNbr === 6 && (
-                <Recommendation />
-              )}
-            </CardContent>
-          </Card>
-        </Grid>
+                {activateSectionNbr === 1 && <Home />}
+                {activateSectionNbr === 2 && <Experience />}
+                {activateSectionNbr === 3 && <Projects />}
+                {activateSectionNbr === 4 && <Education />}
+                {activateSectionNbr === 5 && <Skills isMobile={isMobile} />}
+                {activateSectionNbr === 6 && <Recommendation />}
+              </CardContent>
+            </Card>
+          </Grid>
+        )}
       </Grid>
 
       {floatingNavigation ? (

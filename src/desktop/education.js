@@ -175,7 +175,7 @@ export default function Education() {
               <Card sx={{ minHeight: "300px" }}>
                 <React.Fragment>
                   <CardContent>
-                    {courseWork.map((item) => {
+                    {courseWork.map((item, index) => {
                       return (
                         <Grid
                           container
@@ -183,6 +183,7 @@ export default function Education() {
                           justifyContent="center"
                           alignItems="center"
                           spacing={3}
+                          key={index}
                         >
                           <Grid xs={12}>
                             <Typography
@@ -364,7 +365,7 @@ export default function Education() {
               <Card sx={{ minHeight: "300px" }}>
                 <React.Fragment>
                   <CardContent>
-                    {courseWork.map((item) => {
+                    {courseWork.map((item, index) => {
                       return (
                         <Grid
                           container
@@ -372,6 +373,7 @@ export default function Education() {
                           justifyContent="center"
                           alignItems="center"
                           spacing={3}
+                          key={index}
                         >
                           <Grid xs={12}>
                             <Typography

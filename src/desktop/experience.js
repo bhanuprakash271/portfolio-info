@@ -28,7 +28,7 @@ export default function Experience() {
           >
             <Grid xs={12} md={2} align="center">
               <Stack
-                direction={{ xs: 'row', md: 'column' }}
+                direction={{ xs: "row", md: "column" }}
                 justifyContent="flex-start"
                 alignItems="flex-end"
                 spacing={1}
@@ -36,6 +36,7 @@ export default function Experience() {
                 {experience.map((item, idx) => {
                   return (
                     <Paper
+                      key={idx}
                       sx={
                         activeIndex === idx
                           ? {
@@ -55,7 +56,7 @@ export default function Experience() {
                               fontSize: "14px",
                             }
                       }
-                      elevation={activeIndex === idx ? 16 : 0}
+                      elevation={activeIndex === idx ? 8 : 0}
                       onClick={() => {
                         handleExperience(idx);
                       }}
@@ -81,7 +82,7 @@ export default function Experience() {
             <Grid xs={12} md={10} align="left">
               {experience.map((item, idx) => {
                 return activeIndex == idx ? (
-                  <React.Fragment>
+                  <React.Fragment key={idx}>
                     <Typography
                       sx={{ fontFamily: `'jost', sans-serif`, fontWeight: 600 }}
                     >
@@ -90,9 +91,12 @@ export default function Experience() {
                     <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
                       {item.company + ", " + item.location}
                     </Typography>
-                    {item.description.map((txt) => {
+                    {item.description.map((txt, txtIndex) => {
                       return (
-                        <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                        <Typography
+                          key={txtIndex}
+                          sx={{ fontFamily: `'jost', sans-serif` }}
+                        >
                           <ul style={{ margin: "0px" }}>
                             <li>{txt}</li>
                           </ul>

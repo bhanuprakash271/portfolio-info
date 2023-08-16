@@ -23,7 +23,7 @@ export default function Projects() {
     >
       {projectContent.map((item, index) => {
         return (
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={6} key={index}>
             <Card sx={{ minHeight: "300px" }}>
               <CardContent>
                 <Grid
@@ -38,7 +38,7 @@ export default function Projects() {
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         backgroundColor: "lavender",
-                        fontWeight: 600
+                        fontWeight: 600,
                       }}
                     >
                       {item.title}
@@ -62,7 +62,12 @@ export default function Projects() {
                     )}
                   </Grid>
                   <Grid xs={12}>
-                    <Typography sx={{ fontFamily: `'jost', sans-serif`,minHeight:'100px' }}>
+                    <Typography
+                      sx={{
+                        fontFamily: `'jost', sans-serif`,
+                        minHeight: "100px",
+                      }}
+                    >
                       {item.description}
                     </Typography>
                   </Grid>
@@ -70,19 +75,20 @@ export default function Projects() {
                     <Divider
                       variant="middle"
                       align="center"
-                      sx={{ fontFamily: `'jost', sans-serif`,fontWeight: 500 }}
+                      sx={{ fontFamily: `'jost', sans-serif`, fontWeight: 500 }}
                     >
                       Skills used
                     </Divider>
                   </Grid>
                   <Grid xs={12}>
                     <Typography variant="body2" color="text.secondary">
-                      {item.skills.map((skill) => {
+                      {item.skills.map((skill, skillIndex) => {
                         return (
                           <Chip
                             variant="outlined"
                             color="info"
                             label={skill}
+                            key={skillIndex}
                             sx={{
                               fontFamily: `'jost', sans-serif`,
                               margin: "5px",

@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Chip from "@mui/material/Chip";
 
 export default function Skills(props) {
-  const skills = ["Programming Skills", "Tools/IDE", "Databases", "Frameworks"];
+  const skills = ["Programming languages", "Frameworks","Software Tools/IDE", "Databases"];
   const [showAll, setShowAll] = useState(props.isMobile ? false : true);
   const [showSkillIndex, setShowSkillIndex] = useState(null);
 
@@ -79,7 +79,7 @@ export default function Skills(props) {
                 alignItems="flex-start"
                 spacing={1}
               >
-                {skillIcons.map((item) => (
+                {skillIcons[index].map((item) => (
                   <Grid xs={3} md={1}>
                     <CardMedia
                       component="img"

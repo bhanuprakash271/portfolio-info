@@ -1,26 +1,39 @@
 export const description =
   "Having accumulated more than four years of professional experience as a proficient Full-Stack developer, I have dedicated myself to refining my skills in developing advanced and engaging user interfaces for web applications. My technical proficiency encompasses a range of technologies, including React JS, Redux, Java, Angular JS, MySQL, and Node JS. Leveraging this expertise, I have successfully delivered exceptional projects that align with the requirements and expectations of clients and end-users. Throughout my journey, I have gained valuable insights into the practicality and functionality of real-world applications, enabling me to comprehend the challenges that emerge during software development when faced with specific project requirements.";
 export const skillIcons = [
-  "https://img.icons8.com/officel/80/react.png",
-  "https://img.icons8.com/color/96/nodejs.png",
-  "https://img.icons8.com/nolan/96/java-coffee-cup-logo.png",
-  "https://img.icons8.com/nolan/96/angularjs.png",
-  "https://img.icons8.com/fluency/96/mysql-logo.png",
-  "https://img.icons8.com/color/96/python--v1.png",
-  "https://img.icons8.com/color/96/javascript--v1.png",
-  "https://img.icons8.com/color/96/redux.png",
-  "https://img.icons8.com/color/96/html-filetype--v1.png",
-  "https://img.icons8.com/color/96/css.png",
-  "https://img.icons8.com/color/96/spring-logo.png",
-  "https://img.icons8.com/color/96/mongodb.png",
-  "https://img.icons8.com/color/96/typescript.png",
-  "https://img.icons8.com/color/96/npm.png",
-  "https://img.icons8.com/color/96/git.png",
-  "https://img.icons8.com/color/96/visual-studio-code-2019.png",
-  "https://img.icons8.com/officel/80/java-eclipse.png",
-  "https://img.icons8.com/dusk/128/postman-api.png",
-  "https://img.icons8.com/dusk/128/dbeaver.png",
-  "https://img.icons8.com/fluency/96/graphql.png",
+  [
+    "https://img.icons8.com/nolan/96/java-coffee-cup-logo.png",
+    "https://img.icons8.com/color/96/python--v1.png",
+    "https://img.icons8.com/color/96/javascript--v1.png",
+    "https://img.icons8.com/color/96/typescript.png",
+  ],
+  [
+    "https://img.icons8.com/officel/80/react.png",
+    "https://img.icons8.com/color/96/nodejs.png",
+    "https://img.icons8.com/nolan/96/angularjs.png",
+    "https://img.icons8.com/color/96/redux.png",
+    "https://img.icons8.com/color/96/html-filetype--v1.png",
+    "https://img.icons8.com/color/96/css.png",
+    "https://img.icons8.com/color/96/spring-logo.png",
+    "https://img.icons8.com/fluency/96/graphql.png",
+    "https://img.icons8.com/offices/80/express-js.png",
+    "https://img.icons8.com/nolan/64/bootstrap.png",
+  ],
+  [
+    //"https://img.icons8.com/color/96/npm.png"--package managers,
+    "https://img.icons8.com/color/96/git.png",
+    "https://img.icons8.com/color/96/visual-studio-code-2019.png",
+    "https://img.icons8.com/officel/80/java-eclipse.png",
+    "https://img.icons8.com/dusk/128/postman-api.png",
+    "https://img.icons8.com/dusk/128/dbeaver.png",
+    "https://img.icons8.com/color/48/jira.png",
+  ],
+  [
+    "https://img.icons8.com/fluency/96/mysql-logo.png",
+    "https://img.icons8.com/color/96/mongodb.png",
+    "https://img.icons8.com/fluency/96/maria-db.png",
+    "https://img.icons8.com/external-creatype-outline-colourcreatype/64/external-db2-video-file-extension-line-creatype-outline-colourcreatype.png",
+  ],
 ];
 
 export const socialLinks = {
@@ -134,7 +147,7 @@ export const projectContent = [
 
 export const experience = [
   {
-    year: "2022 - Current",
+    year: "Feb 2022 - Current",
     company: "University Of Central Florida",
     position: "Graduate Teaching Assistant",
     location: "Orlando",
@@ -144,17 +157,26 @@ export const experience = [
     ],
   },
   {
-    year: "2019 - 2021",
-    company: "Infosys",
-    position: "Senior System Analyst",
-    location: "Hyderabad",
-    description: ["Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.", "Built user interface with React JS and Redux, while implementing backend services developed in Java.", "Actively participated in Scrum calls with business analysts to decipher the requirements and identify key areas for improvement to enhance user experience further.","Employed Express JS, and GraphQL to help develop and manage the Academy application efficiently."],
-  },
-  {
-    year: "2017 - 2019",
+    year: "Mar 2019 - Nov 2021",
     company: "Infosys",
     position: "Technology Analyst",
+    location: "Hyderabad",
+    description: [
+      "Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.",
+      "Built user interface with React JS and Redux, while implementing backend services developed in Java.",
+      "Actively participated in Scrum calls with business analysts to decipher the requirements and identify key areas for improvement to enhance user experience further.",
+      "Employed Express JS, and GraphQL to help develop and manage the Academy application efficiently.",
+    ],
+  },
+  {
+    year: "Jun 2017 - Mar 2019",
+    company: "Infosys",
+    position: "Senior System Analyst",
     location: "Chennai",
-    description: ["Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.", "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.", "Developed API services in Node JS using graphql to store and fetch data from MySql DB."],
+    description: [
+      "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
+      "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
+      "Developed API services in Node JS using graphql to store and fetch data from MySql DB.",
+    ],
   },
 ];

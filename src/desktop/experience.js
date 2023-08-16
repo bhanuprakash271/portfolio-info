@@ -39,7 +39,7 @@ export default function Experience() {
                       sx={
                         activeIndex === idx
                           ? {
-                              backgroundColor: "cadetblue",
+                              backgroundColor: "lightblue",
                               minHeight: "50px",
                               width: "100%",
                               cursor: "pointer",
@@ -55,7 +55,7 @@ export default function Experience() {
                               fontSize: "14px",
                             }
                       }
-                      elevation={activeIndex === idx ? 3 : 0}
+                      elevation={activeIndex === idx ? 16 : 0}
                       onClick={() => {
                         handleExperience(idx);
                       }}

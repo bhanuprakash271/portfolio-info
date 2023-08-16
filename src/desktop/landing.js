@@ -20,6 +20,8 @@ import Experience from "./experience";
 import { isMobile } from "react-device-detect";
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
+import CardMedia from "@mui/material/CardMedia";
+import { navigateCardIcons } from "./../constants";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -158,9 +160,16 @@ export default function LandingPage() {
                       label="Experience"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
-                        //margin: "5px",
                         fontWeight: 500,
                       }}
+                      icon={
+                        <CardMedia
+                          component="img"
+                          src={navigateCardIcons.experience}
+                          alt="img"
+                          sx={{ height: "20px", width: "20px" }}
+                        />
+                      }
                     />
                   </Divider>
 
@@ -178,9 +187,16 @@ export default function LandingPage() {
                       label="Projects"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
-                        //margin: "5px",
                         fontWeight: 500,
                       }}
+                      icon={
+                        <CardMedia
+                          component="img"
+                          src={navigateCardIcons.projects}
+                          alt="img"
+                          sx={{ height: "20px", width: "20px" }}
+                        />
+                      }
                     />
                   </Divider>
 
@@ -198,9 +214,16 @@ export default function LandingPage() {
                       label="Education"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
-                        //margin: "5px",
                         fontWeight: 500,
                       }}
+                      icon={
+                        <CardMedia
+                          component="img"
+                          src={navigateCardIcons.education}
+                          alt="img"
+                          sx={{ height: "20px", width: "20px" }}
+                        />
+                      }
                     />
                   </Divider>
 
@@ -218,9 +241,16 @@ export default function LandingPage() {
                       label="Skills"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
-                        //margin: "5px",
                         fontWeight: 500,
                       }}
+                      icon={
+                        <CardMedia
+                          component="img"
+                          src={navigateCardIcons.skills}
+                          alt="img"
+                          sx={{ height: "20px", width: "20px" }}
+                        />
+                      }
                     />
                   </Divider>
 
@@ -238,9 +268,16 @@ export default function LandingPage() {
                       label="Recommendations"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
-                        //margin: "5px",
                         fontWeight: 500,
                       }}
+                      icon={
+                        <CardMedia
+                          component="img"
+                          src={navigateCardIcons.recommendations}
+                          alt="img"
+                          sx={{ height: "20px", width: "20px" }}
+                        />
+                      }
                     />
                   </Divider>
 

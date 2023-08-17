@@ -52,6 +52,7 @@ export default function Skills(props) {
               margin: "10px",
               fontSize: "15px",
               fontFamily: `'jost', sans-serif`,
+              borderRadius:'0px'
             }}
           />
         </Grid>

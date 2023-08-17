@@ -8,12 +8,24 @@ import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Unstable_Grid2";
 import { description, experience } from "../constants";
 import Stack from "@mui/material/Stack";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export default function Experience() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleExperience = (val) => {
     setActiveIndex(val);
+  };
+
+  const handleLinks = (idx) => {
+    let URL = "";
+    if (idx === 0) {
+      URL = "https://www.ucf.edu/";
+    } else {
+      URL = "https://www.infosys.com/";
+    }
+
+    window.open(URL);
   };
   return (
     <React.Fragment>
@@ -40,7 +52,7 @@ export default function Experience() {
                       sx={
                         activeIndex === idx
                           ? {
-                              backgroundColor: "lightblue",
+                              backgroundColor: "aquamarine",
                               minHeight: "50px",
                               width: "100%",
                               cursor: "pointer",
@@ -89,7 +101,17 @@ export default function Experience() {
                       {item.position}
                     </Typography>
                     <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                      {item.company + ", " + item.location}
+                      {item.company}
+                      <OpenInNewIcon
+                        sx={{
+                          color: "lightblue",
+                          width: "15px",
+                          height: "15px",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => handleLinks(idx)}
+                      />
+                      {"," + item.location}
                     </Typography>
                     {item.description.map((txt, txtIndex) => {
                       return (

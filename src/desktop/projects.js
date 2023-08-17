@@ -77,7 +77,7 @@ export default function Projects() {
                       align="center"
                       sx={{ fontFamily: `'jost', sans-serif`, fontWeight: 500 }}
                     >
-                      Skills used
+                      Technologies Used
                     </Divider>
                   </Grid>
                   <Grid xs={12}>

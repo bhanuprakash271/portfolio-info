@@ -260,6 +260,7 @@ export default function Education() {
                           width: 100,
                           objectFit: "contain",
                           objectPosition: "bottom",
+                          backgroundColor:'lavenderblush'
                         }}
                         image={sathyabama}
                         title="Sathyabama"

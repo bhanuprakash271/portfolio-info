@@ -114,7 +114,7 @@ export default function LandingPage() {
           <Card
             variant="outlined"
             sx={{
-              backgroundColor: "aliceblue",
+              backgroundColor: "lightblue",
               margin: "5px",
               borderRadius: "10px",
             }}
@@ -138,7 +138,7 @@ export default function LandingPage() {
             <Card
               variant="outlined"
               sx={{
-                backgroundColor: "aliceblue",
+                backgroundColor: "lightblue",
                 margin: "5px",
                 borderRadius: "10px",
               }}
@@ -156,11 +156,12 @@ export default function LandingPage() {
                   >
                     <Chip
                       variant="outlined"
-                      color="info"
                       label="Experience"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         fontWeight: 500,
+                        backgroundColor:'palevioletred',
+                        color:'white'
                       }}
                       icon={
                         <CardMedia
@@ -183,11 +184,12 @@ export default function LandingPage() {
                   >
                     <Chip
                       variant="outlined"
-                      color="info"
                       label="Projects"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         fontWeight: 500,
+                        backgroundColor:'palevioletred',
+                        color:'white'
                       }}
                       icon={
                         <CardMedia
@@ -210,11 +212,12 @@ export default function LandingPage() {
                   >
                     <Chip
                       variant="outlined"
-                      color="info"
                       label="Education"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         fontWeight: 500,
+                        backgroundColor:'palevioletred',
+                        color:'white'
                       }}
                       icon={
                         <CardMedia
@@ -237,11 +240,12 @@ export default function LandingPage() {
                   >
                     <Chip
                       variant="outlined"
-                      color="info"
                       label="Skills"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         fontWeight: 500,
+                        backgroundColor:'palevioletred',
+                        color:'white'
                       }}
                       icon={
                         <CardMedia
@@ -264,11 +268,12 @@ export default function LandingPage() {
                   >
                     <Chip
                       variant="outlined"
-                      color="info"
                       label="Recommendations"
                       sx={{
                         fontFamily: `'jost', sans-serif`,
                         fontWeight: 500,
+                        backgroundColor:'palevioletred',
+                        color:'white'
                       }}
                       icon={
                         <CardMedia
@@ -291,7 +296,7 @@ export default function LandingPage() {
             <Card
               variant="outlined"
               sx={{
-                backgroundColor: "aliceblue",
+                backgroundColor: "lightblue",
                 margin: "5px",
                 borderRadius: "10px",
               }}

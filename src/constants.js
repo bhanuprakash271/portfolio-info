@@ -47,8 +47,8 @@ export const socialIcons = {
   github: "https://img.icons8.com/ios-filled/50/github.png",
   mail: "https://img.icons8.com/color/96/gmail-new.png",
   linkedin: "https://img.icons8.com/fluency/96/linkedin.png",
-  address: "https://img.icons8.com/ultraviolet/40/place-marker--v1.png",
-  phone: "https://img.icons8.com/ultraviolet/40/phone.png",
+  address: "https://img.icons8.com/officel/80/place-marker--v1.png",
+  phone: "https://img.icons8.com/dusk/64/phone.png",
 };
 
 export const navigateCardIcons = {
@@ -59,6 +59,7 @@ export const navigateCardIcons = {
   recommendations:
     "https://img.icons8.com/external-flat-02-chattapat-/64/external-recommend-black-friday-flat-02-chattapat-.png",
   skills: "https://img.icons8.com/color/48/programming--v1.png",
+  contact:"https://img.icons8.com/bubbles/50/apple-contacts.png",
 };
 
 export const courseWork = [

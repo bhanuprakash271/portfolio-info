@@ -45,42 +45,17 @@ export default function Navigate(props) {
 
   return (
     <Stack direction="row" spacing={2}>
-      {/* <Paper>
-        <MenuList>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>My account</MenuItem>
-          <MenuItem>Logout</MenuItem>
-        </MenuList>
-      </Paper> */}
       <div>
-        {/* <Button
-          ref={anchorRef}
-          id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-        >
-          Dashboard
-        </Button> */}
         <Popper
           open={true}
           anchorEl={anchorRef.current}
           role={undefined}
-          //placement="bottom-start"
           transition
           disablePortal
-          style={{ bottom: "140px", right: "4%", left: "auto", top: "auto" }}
+          style={{ bottom: "160px", right: "4%", left: "auto", top: "auto" }}
         >
           {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              //   style={{
-              //     transformOrigin:
-              //       placement === 'bottom-start' ? 'left top' : 'left bottom',
-              //   }}
-              //style={{top:"50%",left:"90%"}}
-            >
+            <Grow {...TransitionProps}>
               <Paper>
                 <ClickAwayListener
                   onClickAway={() => {
@@ -93,12 +68,11 @@ export default function Navigate(props) {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    
                     <MenuItem
                       onClick={() => {
                         props.handleMenuCard(1);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
                       Home
                     </MenuItem>
@@ -107,16 +81,16 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(2);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
-                     Experience
+                      Experience
                     </MenuItem>
                     <Divider variant="middle" align="center"></Divider>
                     <MenuItem
                       onClick={() => {
                         props.handleMenuCard(3);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
                       Projects
                     </MenuItem>
@@ -125,7 +99,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(4);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
                       Education
                     </MenuItem>
@@ -134,7 +108,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(5);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
                       Skills
                     </MenuItem>
@@ -143,11 +117,19 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(6);
                       }}
-                      sx={{fontFamily:`'jost', sans-serif`}}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
                     >
                       Recommendations
                     </MenuItem>
-                    
+                    <Divider variant="middle" align="center"></Divider>
+                    <MenuItem
+                      onClick={() => {
+                        props.handleMenuCard(7);
+                      }}
+                      sx={{ fontFamily: `'jost', sans-serif` }}
+                    >
+                      Contact Me
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

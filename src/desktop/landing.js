@@ -22,6 +22,9 @@ import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
 import CardMedia from "@mui/material/CardMedia";
 import { navigateCardIcons } from "./../constants";
+import MobileProfile from "../mobile/mobileProfile";
+import MobileContact from "../mobile/mobileContact";
+import MobileHeaderChip from "../mobile/mobileHeaderChip";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -109,32 +112,27 @@ export default function LandingPage() {
 
       {/* <Profile/> */}
       <Grid container spacing={0}>
-        {/* {((isMobile && activateSectionNbr === 1) || !isMobile) && ( */}
-        <Grid xs={12} md={2}>
-          <Card
-            variant="outlined"
-            sx={{
-              backgroundColor: "lightblue",
-              margin: "5px",
-              borderRadius: "10px",
-            }}
-          >
-            <CardContent>
-              <Profile
-                handleSocialIconClick={handleSocialIcon}
-                handleFloatingNavigation={handleFloatingNavigation}
-              />
-            </CardContent>
-          </Card>
-        </Grid>
-        {/* )} */}
-        {/* <Grid xs={0} md={0.5}>
-          <Divider orientation="vertical" variant="middle" align="center">
-            {" "}
-          </Divider>
-        </Grid> */}
+        {!isMobile && (
+          <Grid xs={12} md={2}>
+            <Card
+              variant="outlined"
+              sx={{
+                backgroundColor: "lightblue",
+                margin: "5px",
+                borderRadius: "10px",
+              }}
+            >
+              <CardContent>
+                <Profile
+                  handleSocialIconClick={handleSocialIcon}
+                  handleFloatingNavigation={handleFloatingNavigation}
+                />
+              </CardContent>
+            </Card>
+          </Grid>
+        )}
         {isMobile ? (
-          <Grid xs={12} md={10} sx={{ marginBottom: "100px" }}>
+          <Grid xs={12}>
             <Card
               variant="outlined"
               sx={{
@@ -145,148 +143,51 @@ export default function LandingPage() {
             >
               <CardContent>
                 <div id="1">
-                  <Home />
+                  <MobileProfile />
                 </div>
 
                 <div id="2">
-                  <Divider
-                    variant="middle"
-                    align="center"
-                    sx={{ margin: "20px" }}
-                  >
-                    <Chip
-                      variant="outlined"
-                      label="Experience"
-                      sx={{
-                        fontFamily: `'jost', sans-serif`,
-                        fontWeight: 500,
-                        backgroundColor:'palevioletred',
-                        color:'white'
-                      }}
-                      icon={
-                        <CardMedia
-                          component="img"
-                          src={navigateCardIcons.experience}
-                          alt="img"
-                          sx={{ height: "20px", width: "20px" }}
-                        />
-                      }
-                    />
-                  </Divider>
-
+                  <MobileHeaderChip
+                    label={"Experience"}
+                    icon={navigateCardIcons.experience}
+                  />
                   <Experience />
                 </div>
                 <div id="3">
-                  <Divider
-                    variant="middle"
-                    align="center"
-                    sx={{ margin: "20px" }}
-                  >
-                    <Chip
-                      variant="outlined"
-                      label="Projects"
-                      sx={{
-                        fontFamily: `'jost', sans-serif`,
-                        fontWeight: 500,
-                        backgroundColor:'palevioletred',
-                        color:'white'
-                      }}
-                      icon={
-                        <CardMedia
-                          component="img"
-                          src={navigateCardIcons.projects}
-                          alt="img"
-                          sx={{ height: "20px", width: "20px" }}
-                        />
-                      }
-                    />
-                  </Divider>
-
+                  <MobileHeaderChip
+                    label={"Projects"}
+                    icon={navigateCardIcons.projects}
+                  />
                   <Projects />
                 </div>
                 <div id="4">
-                  <Divider
-                    variant="middle"
-                    align="center"
-                    sx={{ margin: "20px" }}
-                  >
-                    <Chip
-                      variant="outlined"
-                      label="Education"
-                      sx={{
-                        fontFamily: `'jost', sans-serif`,
-                        fontWeight: 500,
-                        backgroundColor:'palevioletred',
-                        color:'white'
-                      }}
-                      icon={
-                        <CardMedia
-                          component="img"
-                          src={navigateCardIcons.education}
-                          alt="img"
-                          sx={{ height: "20px", width: "20px" }}
-                        />
-                      }
-                    />
-                  </Divider>
-
+                  <MobileHeaderChip
+                    label={"Education"}
+                    icon={navigateCardIcons.education}
+                  />
                   <Education />
                 </div>
                 <div id="5">
-                  <Divider
-                    variant="middle"
-                    align="center"
-                    sx={{ margin: "20px" }}
-                  >
-                    <Chip
-                      variant="outlined"
-                      label="Skills"
-                      sx={{
-                        fontFamily: `'jost', sans-serif`,
-                        fontWeight: 500,
-                        backgroundColor:'palevioletred',
-                        color:'white'
-                      }}
-                      icon={
-                        <CardMedia
-                          component="img"
-                          src={navigateCardIcons.skills}
-                          alt="img"
-                          sx={{ height: "20px", width: "20px" }}
-                        />
-                      }
-                    />
-                  </Divider>
-
+                  <MobileHeaderChip
+                    label={"Skills"}
+                    icon={navigateCardIcons.skills}
+                  />
                   <Skills isMobile={isMobile} />
                 </div>
                 <div id="6">
-                  <Divider
-                    variant="middle"
-                    align="center"
-                    sx={{ margin: "20px" }}
-                  >
-                    <Chip
-                      variant="outlined"
-                      label="Recommendations"
-                      sx={{
-                        fontFamily: `'jost', sans-serif`,
-                        fontWeight: 500,
-                        backgroundColor:'palevioletred',
-                        color:'white'
-                      }}
-                      icon={
-                        <CardMedia
-                          component="img"
-                          src={navigateCardIcons.recommendations}
-                          alt="img"
-                          sx={{ height: "20px", width: "20px" }}
-                        />
-                      }
-                    />
-                  </Divider>
-
+                  <MobileHeaderChip
+                    label={"Recommendations"}
+                    icon={navigateCardIcons.recommendations}
+                  />
                   <Recommendation />
+                </div>
+
+                <div id="7">
+                  <MobileHeaderChip
+                    label={"Contact Me"}
+                    icon={navigateCardIcons.contact}
+                  />
+                  <MobileContact handleSocialIconClick={handleSocialIcon} />
                 </div>
               </CardContent>
             </Card>
@@ -326,8 +227,8 @@ export default function LandingPage() {
             <Navigate handleMenu={openMenu} handleMenuCard={handleCard} />
           ) : null}
           <Fab
-            variant="extended"
-            size="small"
+            // variant="extended"
+            //size="small"
             color="primary"
             aria-label="add"
             style={{
@@ -342,7 +243,7 @@ export default function LandingPage() {
               openMenu();
             }}
           >
-            Navigate <NavigationIcon sx={{ lg: 1 }} />
+            <NavigationIcon sx={{ width: "30px", height: "30px" }} />
           </Fab>
         </React.Fragment>
       ) : null}

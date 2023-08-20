@@ -179,7 +179,7 @@ export default function LandingPage() {
                     label={"Recommendations"}
                     icon={navigateCardIcons.recommendations}
                   />
-                  <Recommendation />
+                  <Recommendation isMobile={isMobile}/>
                 </div>
 
                 <div id="7">

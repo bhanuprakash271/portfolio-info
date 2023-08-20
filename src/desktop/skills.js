@@ -70,7 +70,7 @@ export default function Skills(props) {
               expandIcon={!showAll && <ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
-              sx={{ backgroundColor: "lightgreen", minHeight: "50px" }}
+              sx={{ backgroundColor: "#F6D397", minHeight: "50px" }}
             >
               <Typography
                 sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}

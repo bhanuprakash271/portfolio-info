@@ -11,23 +11,19 @@ export default function MobileProfile() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Define an array of texts to shuffle
       const texts = [
         "Web Developer",
         "Full Stack Developer",
         "React Developer",
       ];
-
-      // Generate a random index to select a text from the array
       const randomIndex = Math.floor(Math.random() * texts.length);
-
-      // Update the text state with the randomly selected text
       setText(texts[randomIndex]);
     }, 1500);
 
-    // Clear the interval when the component is unmounted or updated
     return () => clearInterval(interval);
   }, []);
+
+
 
   return (
     <React.Fragment>
@@ -54,9 +50,9 @@ export default function MobileProfile() {
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
-                {"Welcome to my portfolio"}
+                {"Hey there! I am Veera, a "}{text}
               </Typography>
-              <Typography
+              {/* <Typography
                 sx={{
                   fontSize: "25px",
                   fontWeight: "bold",
@@ -64,9 +60,9 @@ export default function MobileProfile() {
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
-                {"I am Veera, a "}
+                {"A "}
                 {text}
-              </Typography>
+              </Typography> */}
             </Grid>
           </Grid>
         </Grid>

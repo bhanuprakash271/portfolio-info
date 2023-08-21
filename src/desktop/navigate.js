@@ -52,11 +52,11 @@ export default function Navigate(props) {
           role={undefined}
           transition
           disablePortal
-          style={{ bottom: "160px", right: "4%", left: "auto", top: "auto",backgroundColor:'aliceblue' }}
+          style={{ bottom: "160px", right: "4%", left: "auto", top: "auto" }}
         >
           {({ TransitionProps, placement }) => (
             <Grow {...TransitionProps}>
-              <Paper>
+              <Paper sx={{backgroundColor:'lightcyan'}}>
                 <ClickAwayListener
                   onClickAway={() => {
                     props.handleMenu();

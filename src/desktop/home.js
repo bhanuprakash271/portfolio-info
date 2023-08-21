@@ -42,19 +42,7 @@ export default function Home() {
             alignItems="flex-start"
           >
             <Grid xs={12}>
-              <Typography
-                sx={{
-                  fontSize: "30px",
-                  fontWeight: "bold",
-                  margin: "10px",
-                  fontFamily: `'jost', sans-serif`,
-                }}
-              >
-                {"Welcome to my portfolio"}
-              </Typography>
-            </Grid>
-            {/* <Grid xs={6}>
-              <Typography
+            <Typography
                 sx={{
                   fontSize: "25px",
                   fontWeight: "bold",
@@ -62,23 +50,11 @@ export default function Home() {
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
-                {"know more"}
+                {"Hey there! I am Veera, a "}{text}
               </Typography>
-            </Grid> */}
+            </Grid>
           </Grid>
         </Grid>
-        <Typography
-          sx={{
-            fontSize: "25px",
-            fontWeight: "bold",
-            margin: "10px",
-            fontFamily: `'jost', sans-serif`,
-          }}
-        >
-          {"I am Veera, a "}
-          {text}
-        </Typography>
-
         <Typography
           sx={{
             fontSize: "20px",

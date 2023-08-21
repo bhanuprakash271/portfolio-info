@@ -10,7 +10,6 @@ import IconButton from "@mui/material/IconButton";
 import CardMedia from "@mui/material/CardMedia";
 import { socialIcons, recommendations } from "../constants";
 import Divider from "@mui/material/Divider";
-import TextField from "@mui/material/TextField";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Stack from "@mui/material/Stack";
@@ -22,11 +21,11 @@ import Paper from "@mui/material/Paper";
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;
 
+
 function Recommendation(props) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = recommendations.length;
-  const [stepperActive, setStepperActive] = useState(true);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -82,7 +81,6 @@ function Recommendation(props) {
               size="large"
               onClick={handleBack}
               disabled={activeStep === 0}
-              //sx={props.isMobile ? { display: "none" } : { display: "block" }}
             >
               <ArrowBackIosIcon />
             </Button>
@@ -100,7 +98,7 @@ function Recommendation(props) {
                     <Card
                       sx={{
                         minHeight: "300px",
-                        backgroundColor: "beige",
+                        backgroundColor: "honeydew",
                         borderRadius: "0px",
                       }}
                     >
@@ -116,11 +114,11 @@ function Recommendation(props) {
                             <Typography
                               sx={{
                                 fontSize: 20,
-                                fontFamily: `'jost', sans-serif,`,
+                                fontFamily: `'jost', sans-serif`,
                                 //fontFamily: `'jost', cursive`,
                               }}
                             >
-                              {step.text}
+                              {`"` + step.text + `"`}
                             </Typography>
                           </Grid>
                           <Grid xs={12} align="right">
@@ -187,7 +185,7 @@ function Recommendation(props) {
           )}
         </Stack>
       </Grid>
-      <Grid xs={12} md={6}>
+      {/* <Grid xs={12} md={6}>
         <Card sx={{ minHeight: "300px", backgroundColor: "seashell" }}>
           <CardContent>
             <Grid
@@ -275,7 +273,7 @@ function Recommendation(props) {
             </Grid>
           </CardContent>
         </Card>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

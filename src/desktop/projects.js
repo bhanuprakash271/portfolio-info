@@ -33,7 +33,7 @@ export default function Projects() {
                   alignItems="center"
                   spacing={1}
                 >
-                  <Grid xs={10} align="left">
+                  <Grid xs={item.github ? 10 : 12} align="left">
                     <Typography
                       sx={{
                         fontFamily: `'jost', sans-serif`,
@@ -44,8 +44,9 @@ export default function Projects() {
                       {item.title}
                     </Typography>
                   </Grid>
-                  <Grid xs={2} align="right">
+                
                     {item.github && (
+                        <Grid xs={2} align="right">
                       <CardMedia
                         component="img"
                         src={socialIcons.github}
@@ -58,9 +59,9 @@ export default function Projects() {
                         onClick={() => {
                           handleGitHub(item.github);
                         }}
-                      />
+                      /> </Grid>
                     )}
-                  </Grid>
+                 
                   <Grid xs={12}>
                     <Typography
                       sx={{

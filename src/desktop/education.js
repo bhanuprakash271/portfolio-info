@@ -342,7 +342,7 @@ export default function Education() {
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
-                              {"CGPA: 4"}
+                              {"CGPA: 8.62/10"}
                             </Typography>
                           </Grid>
                           <Grid xs={12}>

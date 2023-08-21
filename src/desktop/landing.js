@@ -193,13 +193,15 @@ export default function LandingPage() {
             </Card>
           </Grid>
         ) : (
-          <Grid xs={12} md={10} sx={{ marginBottom: "100px" }}>
+          <Grid xs={12} md={10}>
             <Card
               variant="outlined"
               sx={{
                 backgroundColor: "lightblue",
                 margin: "5px",
                 borderRadius: "10px",
+                marginBottom: "100px",
+                minHeight:'600px'
               }}
             >
               <CardContent>

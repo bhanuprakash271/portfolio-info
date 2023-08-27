@@ -161,7 +161,7 @@ export default function Education() {
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
-                              {"Graduation Year: 2023 (Expected)"}
+                              {"Graduation Year: December 2023"}
                             </Typography>
                           </Grid>
                         </Grid>

@@ -55,7 +55,7 @@ function Recommendation(props) {
       alignItems="center"
       spacing={6}
     >
-      <Grid xs={12} md={6}>
+      <Grid xs={12} md={8}>
         <div style={{ marginBottom: "20px" }}>
           <Stepper nonLinear activeStep={activeStep}>
             {recommendations.map((item, index) => (

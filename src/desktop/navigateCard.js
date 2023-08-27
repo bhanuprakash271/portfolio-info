@@ -10,6 +10,8 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function TransitionLeft(props) {
   return <Slide {...props} direction="left" />;
@@ -38,6 +40,9 @@ export default function NavigateCard(props) {
     props.handleSectionNbr(value);
   };
 
+  const theme = useTheme();
+  const hideText = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <React.Fragment>
       <Snackbar
@@ -65,7 +70,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 1 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(1);
                 }}
@@ -83,9 +88,11 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Home"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Home"}
+                    </Typography>
+                  )}
                 </Stack>
               </IconButton>
             </Grid>
@@ -95,7 +102,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 2 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(2);
                 }}
@@ -113,9 +120,11 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Experience"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Experience"}
+                    </Typography>
+                  )}
                 </Stack>
               </IconButton>
             </Grid>
@@ -125,7 +134,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 3 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(3);
                 }}
@@ -143,9 +152,11 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Projects"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Projects"}
+                    </Typography>
+                  )}
                 </Stack>
               </IconButton>
             </Grid>
@@ -155,7 +166,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 4 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(4);
                 }}
@@ -173,9 +184,11 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Education"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Education"}
+                    </Typography>
+                  )}
                 </Stack>
               </IconButton>
             </Grid>
@@ -185,7 +198,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 5 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(5);
                 }}
@@ -203,9 +216,11 @@ export default function NavigateCard(props) {
                     sx={{ height: "30px", width: "30px" }}
                   />
 
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Skills"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Skills"}
+                    </Typography>
+                  )}
                 </Stack>
               </IconButton>
             </Grid>
@@ -215,7 +230,7 @@ export default function NavigateCard(props) {
               sx={activeNbr === 6 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton
-                sx={{ paddingBottom: "0px", width: "100%" }}
+                sx={{ paddingBottom: "0px", width: "100%", minHeight: "50px" }}
                 onClick={() => {
                   handleNavigateCard(6);
                 }}
@@ -234,9 +249,11 @@ export default function NavigateCard(props) {
                   />
 
                   {/* <BootstrapTooltip title="Recommendations" placement="top"> */}
-                  <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
-                    {"Recommendations"}
-                  </Typography>
+                  {!hideText && (
+                    <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      {"Recommendations"}
+                    </Typography>
+                  )}
                   {/* </BootstrapTooltip> */}
                 </Stack>
               </IconButton>

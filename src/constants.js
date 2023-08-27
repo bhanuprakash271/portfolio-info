@@ -39,8 +39,7 @@ export const skillIcons = [
 export const socialLinks = {
   github: "https://github.com/bhanuprakash271",
   mail: "mailto:veerabhanuprakash271@gmail.com",
-  linkedin:
-    "https://www.linkedin.com/in/veera-bhanu-prakash-reddy-annem-801688154/",
+  linkedin: "https://www.linkedin.com/in/veera-annem",
 };
 
 export const socialIcons = {
@@ -59,7 +58,7 @@ export const navigateCardIcons = {
   recommendations:
     "https://img.icons8.com/external-flat-02-chattapat-/64/external-recommend-black-friday-flat-02-chattapat-.png",
   skills: "https://img.icons8.com/color/48/programming--v1.png",
-  contact:"https://img.icons8.com/bubbles/50/apple-contacts.png",
+  contact: "https://img.icons8.com/bubbles/50/apple-contacts.png",
 };
 
 export const courseWork = [
@@ -134,7 +133,7 @@ export const projectContent = [
   },
   {
     title: "Cache Simulator",
-    skills: ["Java"],
+    skills: ["Java","React JS","Chart JS"],
     description: `To analyze and compare the performance, area, and energy of different memory hierarchy configurations using a subset of the SPEC2000 benchmark suite, I created a Java application that implements a flexible cache and memory hierarchy simulator with various cache replacement policies such as LRU, Pseudo-LRU, Optimal policy, and FIFO`,
     github: "https://github.com/bhanuprakash271/Architecture",
   },

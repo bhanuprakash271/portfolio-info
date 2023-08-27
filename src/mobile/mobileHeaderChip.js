@@ -14,13 +14,14 @@ export default function MobileHeaderChip(props) {
           fontWeight: 500,
           backgroundColor: "palevioletred",
           color: "white",
+          fontSize:'16px'
         }}
         icon={
           <CardMedia
             component="img"
             src={props.icon}
             alt="img"
-            sx={{ height: "20px", width: "20px" }}
+            sx={{ height: "30px", width: "30px" }}
           />
         }
       />

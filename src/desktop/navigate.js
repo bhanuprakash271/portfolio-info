@@ -52,7 +52,7 @@ export default function Navigate(props) {
           role={undefined}
           transition
           disablePortal
-          style={{ bottom: "160px", right: "4%", left: "auto", top: "auto" }}
+          style={{ bottom: "110px", right: "4%", left: "auto", top: "auto" }}
         >
           {({ TransitionProps, placement }) => (
             <Grow {...TransitionProps}>

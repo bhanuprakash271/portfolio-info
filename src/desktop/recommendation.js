@@ -17,10 +17,10 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Paper from "@mui/material/Paper";
+import Fab from "@mui/material/Fab";
 
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;
-
 
 function Recommendation(props) {
   const theme = useTheme();
@@ -55,21 +55,61 @@ function Recommendation(props) {
       alignItems="center"
       spacing={6}
     >
-      <Grid xs={12} md={8}>
-        <div style={{ marginBottom: "20px" }}>
-          <Stepper nonLinear activeStep={activeStep}>
+      <Grid xs={12} md={12}>
+        {props.isMobile ? (
+          <div style={{ marginBottom: "20px" }}>
+            <Stepper nonLinear activeStep={activeStep}>
+              {recommendations.map((item, index) => (
+                <Step key={index}>
+                  <StepButton
+                    color="inherit"
+                    onClick={() => {
+                      handleActiveIndex(index);
+                    }}
+                  ></StepButton>
+                </Step>
+              ))}
+            </Stepper>
+          </div>
+        ) : null}
+        {/* <div>
+          <Stack
+            direction="row"
+            justifyContent="space-evenly"
+            alignItems="center"
+            spacing={2}
+          >
             {recommendations.map((item, index) => (
-              <Step key={index}>
-                <StepButton
-                  color="inherit"
-                  onClick={() => {
-                    handleActiveIndex(index);
-                  }}
-                ></StepButton>
-              </Step>
+              <div>
+              <Fab
+                color="primary"
+                aria-label="add"
+                sx={
+                  index == activeStep
+                    ? {
+                        textTransform: "capitalize",
+                        fontFamily: `'jost', sans-serif`,
+                        backgroundColor: "#bd83b8",
+                      }
+                    : {
+                        textTransform: "capitalize",
+                        fontFamily: `'jost', sans-serif`,
+                        backgroundColor: "grey",
+                      }
+                }
+                onClick={() => {
+                  // openQR();
+                }}
+              >
+                {index + 1}
+              </Fab>
+              <div>
+              <Divider/>
+              </div>
+              </div>
             ))}
-          </Stepper>
-        </div>
+          </Stack>
+        </div> */}
         <Stack
           direction="row"
           justifyContent="center"

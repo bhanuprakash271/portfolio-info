@@ -11,6 +11,7 @@ import NavigateCard from "./navigateCard";
 import { isMobile } from "react-device-detect";
 import DesktopAlignment from "./desktopAlignment";
 import MobileAlignment from "./mobileAlignment";
+import QRCode from "./qrcode";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -24,13 +25,14 @@ export default function LandingPage() {
     isMobile ? true : false
   );
   const [verticalView, setVerticalView] = useState(false);
+  const [showQR, setShowQR] = useState(false);
 
-  useEffect(()=>{
-if(verticalView){
-  var elmnt = document.getElementById(activateSectionNbr);
-  elmnt.scrollIntoView();
-}
-  },[verticalView])
+  useEffect(() => {
+    if (verticalView) {
+      var elmnt = document.getElementById(activateSectionNbr);
+      elmnt.scrollIntoView();
+    }
+  }, [verticalView]);
 
   const openMenu = () => {
     let value = !showMenu;
@@ -79,6 +81,10 @@ if(verticalView){
 
   const handleSnackBarClose = () => {
     setOpen(false);
+  };
+
+  const openQR = () => {
+    setShowQR(!showQR);
   };
 
   return (
@@ -138,7 +144,7 @@ if(verticalView){
             aria-label="add"
             style={{
               position: "fixed",
-              bottom: "100px",
+              bottom: "50px",
               right: "5%",
               left: "auto",
               textTransform: "capitalize",
@@ -151,6 +157,30 @@ if(verticalView){
             <NavigationIcon sx={{ width: "30px", height: "30px" }} />
           </Fab>
         </React.Fragment>
+      ) : null}
+
+      {showQR ? <QRCode handleQR={openQR} /> : null}
+
+      {!isMobile ? (
+        <Fab
+          color="primary"
+          aria-label="add"
+          style={{
+            position: "fixed",
+            bottom: "100px",
+            right: "5%",
+            left: "auto",
+            textTransform: "capitalize",
+            fontFamily: `'jost', sans-serif`,
+            width: "100px",
+            backgroundColor:'#0f969c'
+          }}
+          onClick={() => {
+            openQR();
+          }}
+        >
+          View on Mobile
+        </Fab>
       ) : null}
     </div>
   );

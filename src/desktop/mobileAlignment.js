@@ -67,7 +67,7 @@ export default function MobileAlignment(props) {
                     label={"Skills"}
                     icon={navigateCardIcons.skills}
                   />
-                  <Skills isMobile={true} />
+                  <Skills />
                 </div>
                 <div id="6">
                   <MobileHeaderChip

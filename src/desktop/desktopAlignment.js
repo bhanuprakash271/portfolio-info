@@ -56,7 +56,7 @@ export default function DesktopAlignment(props) {
                   label={"Skills"}
                   icon={navigateCardIcons.skills}
                 />
-                <Skills isMobile={false} />
+                <Skills/>
               </div>
               <div id="6">
                 <MobileHeaderChip
@@ -72,7 +72,7 @@ export default function DesktopAlignment(props) {
               {props.activateSectionNbr === 2 && <Experience />}
               {props.activateSectionNbr === 3 && <Projects />}
               {props.activateSectionNbr === 4 && <Education />}
-              {props.activateSectionNbr === 5 && <Skills isMobile={false} />}
+              {props.activateSectionNbr === 5 && <Skills />}
               {props.activateSectionNbr === 6 && <Recommendation />}
             </React.Fragment>
           )}

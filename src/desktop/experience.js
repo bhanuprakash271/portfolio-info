@@ -111,7 +111,7 @@ export default function Experience() {
                         }}
                         onClick={() => handleLinks(idx)}
                       />
-                      {"," + item.location}
+                      {/* {"," + item.location} */}
                     </Typography>
                     {item.description.map((txt, txtIndex) => {
                       return (

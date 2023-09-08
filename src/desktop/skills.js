@@ -9,14 +9,14 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Chip from "@mui/material/Chip";
 
-export default function Skills(props) {
+export default function Skills() {
   const skills = [
     "Programming languages",
     "Frameworks",
     "Software Tools/IDE",
     "Databases",
   ];
-  const [showAll, setShowAll] = useState(props.isMobile ? false : true);
+  const [showAll, setShowAll] = useState(true);
   const [showSkillIndex, setShowSkillIndex] = useState(null);
 
   const handleSwitchChange = () => {
@@ -52,7 +52,7 @@ export default function Skills(props) {
               margin: "10px",
               fontSize: "15px",
               fontFamily: `'jost', sans-serif`,
-              borderRadius:'0px',
+              borderRadius:'5px',
             }}
           />
         </Grid>

@@ -85,7 +85,7 @@ export const recommendations = [
     linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
   },
   {
-    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+    text: `A coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions.  your code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, you demonstrate mastery, innovating with flair. A true technophile, you excel in the art of programming.`,
     by: "Sai Charan Reddy Pannala",
     position: "Professional Chess Player",
     linkedin: "https://www.linkedin.com/in/saicharan0312/",
@@ -147,13 +147,14 @@ export const projectContent = [
 
 export const experience = [
   {
-    year: "Feb 2022 - Current",
-    company: "University Of Central Florida",
-    position: "Graduate Teaching Assistant",
-    location: "Orlando",
+    year: "Jun 2017 - Mar 2019",
+    company: "Infosys",
+    position: "Senior System Analyst",
+    location: "Chennai",
     description: [
-      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting Professors.",
-      "Conducted in-person lab sessions, proctored exams, and advised students on Database Concepts, Web Based Information Technology, and Programming in C.",
+      "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
+      "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
+      "Developed API services in Node JS using graphql to store and fetch data from MySql DB.",
     ],
   },
   {
@@ -169,14 +170,14 @@ export const experience = [
     ],
   },
   {
-    year: "Jun 2017 - Mar 2019",
-    company: "Infosys",
-    position: "Senior System Analyst",
-    location: "Chennai",
+    year: "Feb 2022 - Current",
+    company: "University Of Central Florida",
+    position: "Graduate Teaching Assistant",
+    location: "Orlando",
     description: [
-      "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
-      "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
-      "Developed API services in Node JS using graphql to store and fetch data from MySql DB.",
+      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting Professors.",
+      "Conducted in-person lab sessions, proctored exams, and advised students on Database Concepts, Web Based Information Technology, and Programming in C.",
     ],
   },
+
 ];

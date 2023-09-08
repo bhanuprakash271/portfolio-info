@@ -38,7 +38,7 @@ export default function Education() {
         alignItems="center"
         spacing={{ xs: 2, md: 3 }}
       >
-        <Grid xs={12} md={6}>
+        <Grid xs={12} md={12}>
           <ReactCardFlip
             isFlipped={flipOne}
             flipDirection="horizontal"
@@ -161,7 +161,7 @@ export default function Education() {
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
-                              {"Graduation Year: December 2023"}
+                              {"Graduation: December 2023"}
                             </Typography>
                           </Grid>
                         </Grid>
@@ -232,7 +232,7 @@ export default function Education() {
           </ReactCardFlip>
         </Grid>
 
-        <Grid xs={12} md={6}>
+        {/* <Grid xs={12} md={6}>
           <ReactCardFlip
             isFlipped={flipTwo}
             flipDirection="horizontal"
@@ -286,20 +286,6 @@ export default function Education() {
                               website
                             </Button>
                           </Grid>
-                          {/* <Grid xs={6} align="left">
-                            <Button
-                              size="small"
-                              variant="outlined"
-                              onClick={() => setFlipTwo(!flipTwo)}
-                              sx={{
-                                textTransform: "capitalize",
-                                fontSize: 14,
-                                fontFamily: `'jost', sans-serif`,
-                              }}
-                            >
-                              Course Work
-                            </Button>
-                          </Grid> */}
                         </Grid>
                       </CardActions>
                     </Grid>
@@ -421,7 +407,7 @@ export default function Education() {
               </Card>
             </Paper>
           </ReactCardFlip>
-        </Grid>
+        </Grid> */}
       </Grid>
     </React.Fragment>
   );

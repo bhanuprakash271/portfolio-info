@@ -83,30 +83,35 @@ export const recommendations = [
     by: "Jaswanth Reddy Manimala",
     position: "AWS Solutions Architect",
     linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+    profileIdx:0
   },
   {
     text: `A coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions.  your code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, you demonstrate mastery, innovating with flair. A true technophile, you excel in the art of programming.`,
     by: "Sai Charan Reddy Pannala",
     position: "Professional Chess Player",
     linkedin: "https://www.linkedin.com/in/saicharan0312/",
+    profileIdx:1
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Jaswanth Reddy Manimala",
-    position: "AWS Solutions Architect",
-    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+    by: "Vamshee Priya",
+    position: "Sofware Engineer Intern @ Motorola Solutions",
+    linkedin: "https://www.linkedin.com/in/vamsheepriya/",
+    profileIdx:2
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Jaswanth Reddy Manimala",
-    position: "AWS Solutions Architect",
-    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+    by: "Santhan Ratakonda",
+    position: "ML Intern @ Seagate Technology",
+    linkedin: "https://www.linkedin.com/in/santhan-ratakonda/",
+    profileIdx:3
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Jaswanth Reddy Manimala",
-    position: "AWS Solutions Architect",
-    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+    by: "Reetika Monavarthi",
+    position: "Software Engineer Intern @ Choice Hotels",
+    linkedin: "https://www.linkedin.com/in/reetikam/",
+    profileIdx:4
   },
 ];
 

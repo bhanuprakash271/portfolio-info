@@ -17,7 +17,12 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Paper from "@mui/material/Paper";
-import Fab from "@mui/material/Fab";
+import JaswanthProfile from "./JaswanthProfile.jpg";
+import Avatar from "@mui/material/Avatar";
+import CharanProfile from "./CharanProfile.jpg";
+import SanthanProfile from "./SanthanProfile.jpg";
+import PriyaProfile from "./PriyaProfile.jpg";
+import ReethikaProfile from "./ReethikaProfile.jpg";
 
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;
@@ -26,6 +31,14 @@ function Recommendation(props) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = recommendations.length;
+
+  const ProfileList = [
+    JaswanthProfile,
+    CharanProfile,
+    PriyaProfile,
+    SanthanProfile,
+    ReethikaProfile
+  ];
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -72,44 +85,6 @@ function Recommendation(props) {
             </Stepper>
           </div>
         ) : null}
-        {/* <div>
-          <Stack
-            direction="row"
-            justifyContent="space-evenly"
-            alignItems="center"
-            spacing={2}
-          >
-            {recommendations.map((item, index) => (
-              <div>
-              <Fab
-                color="primary"
-                aria-label="add"
-                sx={
-                  index == activeStep
-                    ? {
-                        textTransform: "capitalize",
-                        fontFamily: `'jost', sans-serif`,
-                        backgroundColor: "#bd83b8",
-                      }
-                    : {
-                        textTransform: "capitalize",
-                        fontFamily: `'jost', sans-serif`,
-                        backgroundColor: "grey",
-                      }
-                }
-                onClick={() => {
-                  // openQR();
-                }}
-              >
-                {index + 1}
-              </Fab>
-              <div>
-              <Divider/>
-              </div>
-              </div>
-            ))}
-          </Stack>
-        </div> */}
         <Stack
           direction="row"
           justifyContent="center"
@@ -150,12 +125,18 @@ function Recommendation(props) {
                           alignItems="center"
                           spacing={2}
                         >
+                          <Grid xs={12} align="center">
+                            <Avatar
+                              alt="pic"
+                              src={ProfileList[step.profileIdx]}
+                              sx={{ width: 80, height: 80 }}
+                            />
+                          </Grid>
                           <Grid xs={12}>
                             <Typography
                               sx={{
                                 fontSize: 20,
                                 fontFamily: `'jost', sans-serif`,
-                                //fontFamily: `'jost', cursive`,
                               }}
                             >
                               {`"` + step.text + `"`}
@@ -189,6 +170,7 @@ function Recommendation(props) {
                           sx={{
                             fontSize: 20,
                             fontFamily: `'jost', sans-serif`,
+                            textAlign:"center"
                           }}
                         >
                           {step.position}

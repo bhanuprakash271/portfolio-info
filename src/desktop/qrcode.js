@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import { Typography } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
-import qrcode from "./qrcode.png";
+import qrcode from "../images/qrcode.png";
 
 export default function QRCode(props) {
   const [open, setOpen] = React.useState(false);

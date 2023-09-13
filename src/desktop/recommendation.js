@@ -17,12 +17,12 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Paper from "@mui/material/Paper";
-import JaswanthProfile from "./JaswanthProfile.jpg";
+import JaswanthProfile from "../images/JaswanthProfile.jpg";
 import Avatar from "@mui/material/Avatar";
-import CharanProfile from "./CharanProfile.jpg";
-import SanthanProfile from "./SanthanProfile.jpg";
-import PriyaProfile from "./PriyaProfile.jpg";
-import ReethikaProfile from "./ReethikaProfile.jpg";
+import CharanProfile from "../images/CharanProfile.jpg";
+import SanthanProfile from "../images/SanthanProfile.jpg";
+import PriyaProfile from "../images/PriyaProfile.jpg";
+import ReethikaProfile from "../images/ReethikaProfile.jpg";
 
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;

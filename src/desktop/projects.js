@@ -33,7 +33,7 @@ export default function Projects() {
                   alignItems="center"
                   spacing={1}
                 >
-                  <Grid xs={item.github ? 10 : 12} align="left">
+                  <Grid xs={item.github ? 10 : 12} align="center">
                     <Typography
                       sx={{
                         fontFamily: `'jost', sans-serif`,

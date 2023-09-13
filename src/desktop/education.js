@@ -9,9 +9,9 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { courseWork, universityLinks } from "../constants";
 import CardMedia from "@mui/material/CardMedia";
-import ucf from "./ucf.png";
+import ucf from "../images/ucf.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import sathyabama from "./sathyabama.png";
+import sathyabama from "../images/sathyabama.png";
 import ReactCardFlip from "react-card-flip";
 
 export default function Education() {

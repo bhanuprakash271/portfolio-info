@@ -8,8 +8,27 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Chip from "@mui/material/Chip";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  components: {
+    MuiAccordionSummary: {
+      styleOverrides: {
+        content: {
+          '&.Mui-expanded': {
+          marginTop:'10px', 
+          marginBottom:'10px'
+          },
+        },
+      }
+    }
+  }
+});
+
 
 export default function Skills() {
+
+
   const skills = [
     "Programming languages",
     "Frameworks",
@@ -32,6 +51,7 @@ export default function Skills() {
     }
   };
   return (
+     <ThemeProvider theme={theme}>
     <React.Fragment>
       <Grid
         container
@@ -70,7 +90,7 @@ export default function Skills() {
               expandIcon={!showAll && <ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
-              sx={{ backgroundColor: "#F6D397", minHeight: "50px" }}
+              style={{ backgroundColor: "#F6D397",minHeight:'30px'}}
             >
               <Typography
                 sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}
@@ -102,5 +122,6 @@ export default function Skills() {
         );
       })}
     </React.Fragment>
+     </ThemeProvider>
   );
 }

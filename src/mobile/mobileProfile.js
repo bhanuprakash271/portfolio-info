@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import CardMedia from "@mui/material/CardMedia";
-import profile from "../desktop/profile.jpg";
+import profile from "../images/profile.jpg";
 import DownloadPDF from "../desktop/download";
 import { Typography } from "@mui/material";
 import { description } from "./../constants";

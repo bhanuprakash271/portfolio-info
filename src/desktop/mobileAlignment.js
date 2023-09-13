@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import CardMedia from "@mui/material/CardMedia";
-import profile from "./profile.jpg";
+import profile from "../images/profile.jpg";
 import IconButton from "@mui/material/IconButton";
 import DownloadPDF from "./download";
 import { socialIcons } from "../constants";

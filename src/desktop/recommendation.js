@@ -17,12 +17,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Paper from "@mui/material/Paper";
-import JaswanthProfile from "../images/JaswanthProfile.jpg";
 import Avatar from "@mui/material/Avatar";
-import CharanProfile from "../images/CharanProfile.jpg";
-import SanthanProfile from "../images/SanthanProfile.jpg";
-import PriyaProfile from "../images/PriyaProfile.jpg";
-import ReethikaProfile from "../images/ReethikaProfile.jpg";
 
 //const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const AutoPlaySwipeableViews = SwipeableViews;
@@ -31,14 +26,6 @@ function Recommendation(props) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = recommendations.length;
-
-  const ProfileList = [
-    JaswanthProfile,
-    CharanProfile,
-    PriyaProfile,
-    SanthanProfile,
-    ReethikaProfile
-  ];
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -108,89 +95,88 @@ function Recommendation(props) {
           >
             {recommendations.map((step, index) => (
               <div key={index}>
-                {Math.abs(activeStep - index) <= 2 ? (
-                  <React.Fragment>
-                    <Card
-                      sx={{
-                        minHeight: "300px",
-                        backgroundColor: "honeydew",
-                        borderRadius: "0px",
-                      }}
-                    >
-                      <CardContent>
-                        <Grid
-                          container
-                          direction="row"
-                          justifyContent="center"
-                          alignItems="center"
-                          spacing={2}
-                        >
-                          <Grid xs={12} align="center">
-                            <Avatar
-                              alt="pic"
-                              src={ProfileList[step.profileIdx]}
-                              sx={{ width: 80, height: 80 }}
-                            />
-                          </Grid>
-                          <Grid xs={12}>
-                            <Typography
-                              sx={{
-                                fontSize: 20,
-                                fontFamily: `'jost', sans-serif`,
-                              }}
-                            >
-                              {`"` + step.text + `"`}
-                            </Typography>
-                          </Grid>
-                          <Grid xs={12} align="right">
-                            <Typography
-                              sx={{
-                                fontSize: 20,
-                                fontFamily: `'jost', sans-serif`,
-                              }}
-                            >
-                              {"- " + step.by}
-                            </Typography>
-                          </Grid>
-                        </Grid>
-                      </CardContent>
-                    </Card>
-                    <Paper
-                      elevation={16}
-                      sx={{ borderRadius: "0px", backgroundColor: "beige" }}
-                    >
-                      <Stack
+                <React.Fragment>
+                  <Card
+                    sx={{
+                      minHeight: "300px",
+                      backgroundColor: "honeydew",
+                      borderRadius: "0px",
+                    }}
+                  >
+                    <CardContent>
+                      <Grid
+                        container
                         direction="row"
-                        justifyContent="space-evenly"
+                        justifyContent="center"
                         alignItems="center"
                         spacing={2}
-                        divider={<Divider orientation="vertical" flexItem />}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: 20,
-                            fontFamily: `'jost', sans-serif`,
-                            textAlign:"center"
-                          }}
-                        >
-                          {step.position}
-                        </Typography>
-                        <IconButton
-                          onClick={() => {
-                            handleLinkedIn(step.linkedin);
-                          }}
-                        >
-                          <CardMedia
-                            component="img"
-                            src={socialIcons.linkedin}
-                            alt="img"
-                            sx={{ height: "40px", width: "40px" }}
+                        <Grid xs={12} align="center">
+                          <Avatar
+                            alt="pic"
+                            src={step.profileImg}
+                            sx={{ width: 80, height: 80 }}
                           />
-                        </IconButton>
-                      </Stack>
-                    </Paper>
-                  </React.Fragment>
-                ) : null}
+                        </Grid>
+                        <Grid xs={12}>
+                          <Typography
+                            sx={{
+                              fontSize: 18,
+                              fontFamily: `'jost', sans-serif`,
+                            }}
+                          >
+                            {`"` + step.text + `"`}
+                          </Typography>
+                        </Grid>
+                        <Grid xs={12} align="right">
+                          <Typography
+                            sx={{
+                              fontSize: 18,
+                              fontFamily: `'jost', sans-serif`,
+                            }}
+                          >
+                            {"- " + step.by}
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </CardContent>
+                  </Card>
+                  <Paper
+                    elevation={16}
+                    sx={{ borderRadius: "0px", backgroundColor: "cadetblue" }}
+                  >
+                    <Stack
+                      direction="row"
+                      justifyContent="space-evenly"
+                      alignItems="center"
+                      spacing={2}
+                      divider={<Divider orientation="vertical" flexItem />}
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: 18,
+                          fontFamily: `'jost', sans-serif`,
+                          textAlign: "center",
+                          color: "white",
+                        }}
+                      >
+                        {step.position}
+                      </Typography>
+                      <IconButton
+                        onClick={() => {
+                          handleLinkedIn(step.linkedin);
+                        }}
+                      >
+                        <CardMedia
+                          component="img"
+                          src={socialIcons.linkedin}
+                          alt="img"
+                          sx={{ height: "40px", width: "40px" }}
+                        />
+                      </IconButton>
+                    </Stack>
+                  </Paper>
+                </React.Fragment>
               </div>
             ))}
           </AutoPlaySwipeableViews>

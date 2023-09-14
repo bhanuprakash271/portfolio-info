@@ -1,3 +1,11 @@
+import JaswanthProfile from "./images/JaswanthProfile.jpg";
+import CharanProfile from "./images/CharanProfile.jpg";
+import SanthanProfile from "./images/SanthanProfile.jpg";
+import PriyaProfile from "./images/PriyaProfile.jpg";
+import ReethikaProfile from "./images/ReethikaProfile.jpg";
+import SrinandanProfile from "./images/SrinandanProfile.jpg";
+
+
 export const description =
   "Having accumulated more than four years of professional experience as a proficient Full-Stack developer, I have dedicated myself to refining my skills in developing advanced and engaging user interfaces for web applications. My technical proficiency encompasses a range of technologies, including React JS, Redux, Java, Angular JS, MySQL, and Node JS. Leveraging this expertise, I have successfully delivered exceptional projects that align with the requirements and expectations of clients and end-users. Throughout my journey, I have gained valuable insights into the practicality and functionality of real-world applications, enabling me to comprehend the challenges that emerge during software development when faced with specific project requirements.";
 export const skillIcons = [
@@ -83,35 +91,42 @@ export const recommendations = [
     by: "Jaswanth Reddy Manimala",
     position: "AWS Solutions Architect",
     linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
-    profileIdx:0
+    profileImg:JaswanthProfile
   },
   {
     text: `A coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions.  your code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, you demonstrate mastery, innovating with flair. A true technophile, you excel in the art of programming.`,
     by: "Sai Charan Reddy Pannala",
     position: "Professional Chess Player",
     linkedin: "https://www.linkedin.com/in/saicharan0312/",
-    profileIdx:1
+    profileImg:CharanProfile
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
     by: "Vamshee Priya",
     position: "Sofware Engineer Intern @ Motorola Solutions",
     linkedin: "https://www.linkedin.com/in/vamsheepriya/",
-    profileIdx:2
+    profileImg:PriyaProfile
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
     by: "Santhan Ratakonda",
     position: "ML Intern @ Seagate Technology",
     linkedin: "https://www.linkedin.com/in/santhan-ratakonda/",
-    profileIdx:3
+    profileImg:SanthanProfile
   },
   {
     text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
     by: "Reetika Monavarthi",
     position: "Software Engineer Intern @ Choice Hotels",
     linkedin: "https://www.linkedin.com/in/reetikam/",
-    profileIdx:4
+    profileImg:ReethikaProfile
+  },
+  {
+    text: `Bhanu has exceptional React and JavaScript skills. Working with him on projects has been a huge plus.`,
+    by: "Srinandan Komanduri",
+    position: "Lead Full Stack Developer @ BNY Mellon",
+    linkedin: "https://www.linkedin.com/in/keidakira/",
+    profileImg:SrinandanProfile
   },
 ];
 

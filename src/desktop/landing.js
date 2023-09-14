@@ -173,7 +173,7 @@ export default function LandingPage() {
             textTransform: "capitalize",
             fontFamily: `'jost', sans-serif`,
             width: "100px",
-            backgroundColor:'#0f969c'
+            backgroundColor:'teal'
           }}
           onClick={() => {
             openQR();

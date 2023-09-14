@@ -47,7 +47,6 @@ export default function Education() {
             <Paper elevation={3}>
               <Card
                 sx={{
-                  // backgroundColor: "lightgoldenrodyellow",
                   minHeight: "300px",
                 }}
               >
@@ -137,7 +136,7 @@ export default function Education() {
                           <Grid xs={12}>
                             <Typography
                               sx={{
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
@@ -147,7 +146,7 @@ export default function Education() {
                           <Grid xs={12}>
                             <Typography
                               sx={{
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
@@ -157,7 +156,7 @@ export default function Education() {
                           <Grid xs={12}>
                             <Typography
                               sx={{
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >
@@ -188,7 +187,7 @@ export default function Education() {
                           <Grid xs={12}>
                             <Typography
                               sx={{
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontFamily: `'jost', sans-serif`,
                               }}
                             >

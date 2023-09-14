@@ -93,7 +93,7 @@ export default function Skills() {
               style={{ backgroundColor: "#F6D397",minHeight:'30px'}}
             >
               <Typography
-                sx={{ fontSize: "15px", fontFamily: `'jost', sans-serif` }}
+                sx={{ fontSize: "16px", fontFamily: `'jost', sans-serif` }}
               >
                 {skill}
               </Typography>

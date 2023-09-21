@@ -34,7 +34,7 @@ export default function MobileContact(props) {
                   component="img"
                   src={socialIcons.linkedin}
                   alt="img"
-                  sx={{ height: "40px", width: "40px" }}
+                  sx={{ height: "50px", width: "50px" }}
                 />
               </IconButton>
             </Grid>
@@ -48,7 +48,7 @@ export default function MobileContact(props) {
                   component="img"
                   src={socialIcons.mail}
                   alt="img"
-                  sx={{ height: "40px", width: "40px" }}
+                  sx={{ height: "50px", width: "50px" }}
                 />
               </IconButton>
             </Grid>
@@ -62,7 +62,7 @@ export default function MobileContact(props) {
                   component="img"
                   src={socialIcons.github}
                   alt="img"
-                  sx={{ height: "40px", width: "40px" }}
+                  sx={{ height: "50px", width: "50px" }}
                 />
               </IconButton>
             </Grid>

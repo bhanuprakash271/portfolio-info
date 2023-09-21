@@ -103,7 +103,7 @@ export default function LandingPage() {
           severity="success"
           sx={{ width: "100%", fontFamily: `'jost', sans-serif` }}
         >
-          Email Address has copied
+          Email Address is copied
         </Alert>
       </Snackbar>
 

@@ -86,41 +86,41 @@ export const universityLinks = {
 };
 
 export const recommendations = [
+  // {
+  //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+  //   by: "Jaswanth Reddy Manimala",
+  //   position: "AWS Solutions Architect",
+  //   linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
+  //   profileImg:JaswanthProfile
+  // },
   {
-    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Jaswanth Reddy Manimala",
-    position: "AWS Solutions Architect",
-    linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
-    profileImg:JaswanthProfile
-  },
-  {
-    text: `A coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions.  your code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, you demonstrate mastery, innovating with flair. A true technophile, you excel in the art of programming.`,
+    text: `Bhanu is a coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions. His code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, he demonstrates mastery, innovating with flair. A true technophile, excels in the art of programming.`,
     by: "Sai Charan Reddy Pannala",
-    position: "Professional Chess Player",
+    position: "Graduate Teaching Assistant @ UCF",
     linkedin: "https://www.linkedin.com/in/saicharan0312/",
     profileImg:CharanProfile
   },
-  {
-    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Vamshee Priya",
-    position: "Sofware Engineer Intern @ Motorola Solutions",
-    linkedin: "https://www.linkedin.com/in/vamsheepriya/",
-    profileImg:PriyaProfile
-  },
-  {
-    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Santhan Ratakonda",
-    position: "ML Intern @ Seagate Technology",
-    linkedin: "https://www.linkedin.com/in/santhan-ratakonda/",
-    profileImg:SanthanProfile
-  },
-  {
-    text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-    by: "Reetika Monavarthi",
-    position: "Software Engineer Intern @ Choice Hotels",
-    linkedin: "https://www.linkedin.com/in/reetikam/",
-    profileImg:ReethikaProfile
-  },
+  // {
+  //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+  //   by: "Vamshee Priya",
+  //   position: "Sofware Engineer Intern @ Motorola Solutions",
+  //   linkedin: "https://www.linkedin.com/in/vamsheepriya/",
+  //   profileImg:PriyaProfile
+  // },
+  // {
+  //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+  //   by: "Santhan Ratakonda",
+  //   position: "ML Intern @ Seagate Technology",
+  //   linkedin: "https://www.linkedin.com/in/santhan-ratakonda/",
+  //   profileImg:SanthanProfile
+  // },
+  // {
+  //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
+  //   by: "Reetika Monavarthi",
+  //   position: "Software Engineer Intern @ Choice Hotels",
+  //   linkedin: "https://www.linkedin.com/in/reetikam/",
+  //   profileImg:ReethikaProfile
+  // },
   {
     text: `Bhanu has exceptional React and JavaScript skills. Working with him on projects has been a huge plus.`,
     by: "Srinandan Komanduri",
@@ -174,7 +174,7 @@ export const experience = [
     description: [
       "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
       "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
-      "Developed API services in Node JS using graphql to store and fetch data from MySql DB.",
+      `Developed API services in Node JS using GraphQL to store and fetch data from MySql DB.`,
     ],
   },
   {

@@ -101,6 +101,7 @@ function Recommendation(props) {
                       minHeight: "300px",
                       backgroundColor: "honeydew",
                       borderRadius: "0px",
+                      marginRight:'5px'
                     }}
                   >
                     <CardContent>
@@ -143,7 +144,7 @@ function Recommendation(props) {
                   </Card>
                   <Paper
                     elevation={16}
-                    sx={{ borderRadius: "0px", backgroundColor: "cadetblue" }}
+                    sx={{ borderRadius: "0px", backgroundColor: "cadetblue", marginRight:'5px' }}
                   >
                     <Stack
                       direction="row"

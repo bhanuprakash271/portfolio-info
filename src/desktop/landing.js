@@ -55,7 +55,7 @@ export default function LandingPage() {
     }
   };
 
-  const handleFloatingNavigation = () => {
+  const handleViewChange = () => {
     setVerticalView(!verticalView);
   };
 
@@ -112,7 +112,7 @@ export default function LandingPage() {
           <Grid xs={3} md={2}>
             <Profile
               handleSocialIconClick={handleSocialIcon}
-              handleFloatingNavigation={handleFloatingNavigation}
+              handleViewChange={handleViewChange}
             />
           </Grid>
         )}

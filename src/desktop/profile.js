@@ -168,7 +168,7 @@ export default function Profile(props) {
                   color:'black'
                 }}
                 onClick={() => {
-                  props.handleFloatingNavigation();
+                  props.handleViewChange();
                 }}
                 variant="contained"
               >

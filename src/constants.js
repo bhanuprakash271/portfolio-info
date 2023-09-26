@@ -195,8 +195,8 @@ export const experience = [
     position: "Graduate Teaching Assistant",
     location: "Orlando",
     description: [
-      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting Professors.",
-      "Conducted in-person lab sessions, proctored exams, and advised students on Database Concepts, Web Based Information Technology, and Programming in C.",
+      "Offered guidance to students on Database Concepts, Web-Based Information Technology, and Programming in C, conducted in-person lab sessions, and proctored exams.",
+      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting professors in course management.",
     ],
   },
 

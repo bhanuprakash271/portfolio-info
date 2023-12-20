@@ -78,6 +78,7 @@ export const courseWork = [
   "Operating Systems and File System Forensics",
   "Cyber Operations Lab",
   "Computer Forensics II",
+  "Computer Vision"
 ];
 
 export const universityLinks = {
@@ -169,7 +170,7 @@ export const experience = [
   {
     year: "Jun 2017 - Mar 2019",
     company: "Infosys",
-    position: "Senior System Analyst",
+    position: "Software Engineer",
     location: "Chennai",
     description: [
       "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
@@ -180,7 +181,7 @@ export const experience = [
   {
     year: "Mar 2019 - Nov 2021",
     company: "Infosys",
-    position: "Technology Analyst",
+    position: "Software Engineer",
     location: "Hyderabad",
     description: [
       "Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.",

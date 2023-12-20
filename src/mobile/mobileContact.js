@@ -88,7 +88,7 @@ export default function MobileContact(props) {
                 fontSize: "15px",
               }}
             >
-              1350 San Remo Point, Florida, United States - 32765.
+              Orlando, FL.
             </Typography>
           </Stack>
         </Grid>

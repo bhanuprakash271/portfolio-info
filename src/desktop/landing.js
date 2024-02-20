@@ -4,7 +4,8 @@ import { socialLinks } from "./../constants";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import Fab from "@mui/material/Fab";
-import NavigationIcon from "@mui/icons-material/Navigation";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import Navigate from "./navigate";
 import Profile from "./profile";
 import NavigateCard from "./navigateCard";
@@ -35,8 +36,11 @@ export default function LandingPage() {
   }, [verticalView]);
 
   const openMenu = () => {
-    let value = !showMenu;
-    setShowMenu(value);
+    setShowMenu(true);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
   };
 
   const handleCard = (nbr) => {
@@ -95,6 +99,7 @@ export default function LandingPage() {
         onClose={() => {
           handleSnackBarClose();
         }}
+        anchorOrigin={{ vertical:'top', horizontal:'center' }}
       >
         <Alert
           onClose={() => {
@@ -136,25 +141,24 @@ export default function LandingPage() {
 
       {floatingNavigation ? (
         <React.Fragment>
-          {showMenu ? (
-            <Navigate handleMenu={openMenu} handleMenuCard={handleCard} />
-          ) : null}
+            <Navigate handleMenu={closeMenu} handleMenuCard={handleCard} showMenu={showMenu}/>
           <Fab
             color="primary"
             aria-label="add"
             style={{
               position: "fixed",
-              bottom: "50px",
+              top: "50px",
               right: "5%",
               left: "auto",
               textTransform: "capitalize",
               fontFamily: `'jost', sans-serif`,
             }}
             onClick={() => {
-              openMenu();
+              showMenu ? closeMenu() : openMenu();
             }}
           >
-            <NavigationIcon sx={{ width: "30px", height: "30px" }} />
+            {showMenu ? <KeyboardDoubleArrowUpIcon sx={{ width: "30px", height: "30px" }} /> : 
+            <KeyboardDoubleArrowDownIcon sx={{ width: "30px", height: "30px" }} />}
           </Fab>
         </React.Fragment>
       ) : null}

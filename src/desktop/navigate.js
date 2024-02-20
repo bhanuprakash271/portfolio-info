@@ -9,50 +9,15 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 
 export default function Navigate(props) {
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
-
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
-  }
-
-  // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-
-    prevOpen.current = open;
-  }, [open]);
-
   return (
     <Stack direction="row" spacing={2}>
       <div>
         <Popper
-          open={true}
-          anchorEl={anchorRef.current}
+          open={props.showMenu}
           role={undefined}
           transition
           disablePortal
-          style={{ bottom: "110px", right: "4%", left: "auto", top: "auto" }}
+          style={{ bottom: "110px", right: "4%", left: "auto", top: "110px" }}
         >
           {({ TransitionProps, placement }) => (
             <Grow {...TransitionProps}>
@@ -63,10 +28,8 @@ export default function Navigate(props) {
                   }}
                 >
                   <MenuList
-                    autoFocusItem={open}
                     id="composition-menu"
                     aria-labelledby="composition-button"
-                    onKeyDown={handleListKeyDown}
                   >
                     <MenuItem
                       onClick={() => {

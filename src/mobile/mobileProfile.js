@@ -18,12 +18,45 @@ export default function MobileProfile() {
       ];
       const randomIndex = Math.floor(Math.random() * texts.length);
       setText(texts[randomIndex]);
-    }, 1500);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
 
+  const TypeWriter = () => {
+    const [displayText, setDisplayText] = useState("");
+    const [showCursor, setShowCursor] = useState(true);
+    useEffect(() => {
+      let currentIndex = 0;
+      const timer = setInterval(() => {
+        if (currentIndex <= text.length) {
+          setDisplayText(text.substring(0, currentIndex));
+          currentIndex++;
+        } else {
+          clearInterval(timer);
+        }
+      }, 100); // Adjust speed here (milliseconds)
 
+      const cursorTimer = setInterval(() => {
+        if (currentIndex <= text.length) {
+        setShowCursor((prev) => !prev);
+        }else {
+          setShowCursor(false);
+        }
+      }, 200); // Adjust cursor blink speed here (milliseconds)
+
+      return () => {
+        clearInterval(timer);
+        clearInterval(cursorTimer);
+      }; // Cleanup function
+    }, [text]);
+    return (
+      <span>
+        {displayText}
+        {showCursor && <span>{"|"}</span>}
+      </span>
+    );
+  };
 
   return (
     <React.Fragment>
@@ -50,19 +83,8 @@ export default function MobileProfile() {
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
-                {"Hey there! I am Veera, a "}{text}
+                {"Hey there! I am Veera."}
               </Typography>
-              {/* <Typography
-                sx={{
-                  fontSize: "25px",
-                  fontWeight: "bold",
-                  margin: "10px",
-                  fontFamily: `'jost', sans-serif`,
-                }}
-              >
-                {"A "}
-                {text}
-              </Typography> */}
             </Grid>
           </Grid>
         </Grid>
@@ -79,6 +101,18 @@ export default function MobileProfile() {
               width: "50%",
             }}
           />
+        </Grid>
+        <Grid xs={12} align="center">
+          <Typography
+            sx={{
+              fontSize: "25px",
+              fontWeight: "bold",
+              margin: "10px",
+              fontFamily: `'jost', sans-serif`,
+            }}
+          >
+            <TypeWriter></TypeWriter>
+          </Typography>
         </Grid>
         <Grid item sx={{ marginTop: "10px" }}>
           <DownloadPDF />

@@ -19,7 +19,7 @@ export default function Experience() {
 
   const handleLinks = (idx) => {
     let URL = "";
-    if (idx === 0) {
+    if (idx === 2) {
       URL = "https://www.ucf.edu/";
     } else {
       URL = "https://www.infosys.com/";

@@ -20,11 +20,40 @@ export default function Home() {
 
       // Update the text state with the randomly selected text
       setText(texts[randomIndex]);
-    }, 1500);
+    }, 2500);
 
     // Clear the interval when the component is unmounted or updated
     return () => clearInterval(interval);
   }, []);
+
+
+    const TypeWriter = () =>{
+      const [displayText, setDisplayText] = useState('');
+      const [showCursor, setShowCursor] = useState(true);
+      useEffect(()=>{
+        let currentIndex = 0;
+        const timer = setInterval(() => {
+          if (currentIndex <= text.length) {
+            setDisplayText(text.substring(0, currentIndex));
+            currentIndex++;
+          } else {
+            clearInterval(timer);
+          }
+        }, 100); // Adjust speed here (milliseconds)
+
+        const cursorTimer = setInterval(() => {
+          setShowCursor((prev) => !prev);
+        }, 200); // Adjust cursor blink speed here (milliseconds)
+        
+        return () =>{
+          clearInterval(timer);
+          clearInterval(cursorTimer);
+        }  // Cleanup function
+      },[text])
+      return <span>{displayText}
+      {showCursor && <span>|</span>}</span>;
+    };
+
 
   return (
     <React.Fragment>
@@ -50,7 +79,7 @@ export default function Home() {
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
-                {"Hey there! I am Veera, a "}{text}
+                {"Hey there! I am Veera, a "}<TypeWriter></TypeWriter>
               </Typography>
             </Grid>
           </Grid>

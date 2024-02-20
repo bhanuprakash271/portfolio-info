@@ -191,13 +191,15 @@ export const experience = [
     ],
   },
   {
-    year: "Feb 2022 - Current",
+    year: "Feb 2022 - Dec 2023",
     company: "University Of Central Florida",
     position: "Graduate Teaching Assistant",
     location: "Orlando",
     description: [
-      "Offered guidance to students on Database Concepts, Web-Based Information Technology, and Programming in C, conducted in-person lab sessions, and proctored exams.",
-      "Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting professors in course management.",
+      //"Offered guidance to students on Database Concepts, Web-Based Information Technology, and Programming in C, conducted in-person lab sessions, and proctored exams.",
+      //"Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting professors in course management.",
+      "As a GTA, I have provided mentorship to students involved in crafting web application projects utilizing React JS, HTML, and CSS.",
+      "Additionally, I offered support and guidance on MySQL server database principles, Web-Based Information Technology, and C programming. This included conducting in-person lab sessions and overseeing exam proctoring.",
     ],
   },
 

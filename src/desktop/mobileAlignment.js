@@ -32,8 +32,8 @@ export default function MobileAlignment(props) {
               variant="outlined"
               sx={{
                 backgroundColor: "lightblue",
-                margin: "5px",
-                borderRadius: "10px",
+                // margin: "5px",
+                // borderRadius: "10px",
               }}
             >
               <CardContent>

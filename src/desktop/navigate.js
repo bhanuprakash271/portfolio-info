@@ -9,6 +9,12 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 
 export default function Navigate(props) {
+
+  const menuItemStyles = {
+    fontFamily: `'jost', sans-serif`,
+     fontWeight:500
+  };
+
   return (
     <Stack direction="row" spacing={2}>
       <div>
@@ -17,7 +23,7 @@ export default function Navigate(props) {
           role={undefined}
           transition
           disablePortal
-          style={{ bottom: "110px", right: "4%", left: "auto", top: "110px" }}
+          style={{ bottom: "110px", right: "4%", left: "auto", top: "85px" }}
         >
           {({ TransitionProps, placement }) => (
             <Grow {...TransitionProps}>
@@ -35,7 +41,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(1);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Home
                     </MenuItem>
@@ -44,7 +50,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(2);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Experience
                     </MenuItem>
@@ -53,7 +59,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(3);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Projects
                     </MenuItem>
@@ -62,7 +68,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(4);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Education
                     </MenuItem>
@@ -71,7 +77,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(5);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Skills
                     </MenuItem>
@@ -80,7 +86,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(6);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Recommendations
                     </MenuItem>
@@ -89,7 +95,7 @@ export default function Navigate(props) {
                       onClick={() => {
                         props.handleMenuCard(7);
                       }}
-                      sx={{ fontFamily: `'jost', sans-serif` }}
+                      sx={menuItemStyles}
                     >
                       Contact Me
                     </MenuItem>

@@ -64,9 +64,10 @@ export default function NavigateCard(props) {
             direction="row"
             justifyContent="center"
             alignItems="center"
+            spacing={2}
           >
             <Grid
-              xs={2}
+               xs={2}
               sx={activeNbr === 1 ? { backgroundColor: "aquamarine" } : null}
             >
               <IconButton

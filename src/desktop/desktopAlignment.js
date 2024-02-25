@@ -13,15 +13,15 @@ import { navigateCardIcons } from "./../constants";
 
 export default function DesktopAlignment(props) {
   return (
-    <Grid xs={9} md={10}>
+    <React.Fragment>
       <Card
         variant="outlined"
         sx={{
           backgroundColor: "lightblue",
-          margin: "5px",
-          borderRadius: "10px",
+          marginLeft: "5px",
+          borderRadius: "0px",
           marginBottom: "100px",
-          minHeight: "600px",
+          minHeight: "100vh",
         }}
       >
         <CardContent>
@@ -56,7 +56,7 @@ export default function DesktopAlignment(props) {
                   label={"Skills"}
                   icon={navigateCardIcons.skills}
                 />
-                <Skills/>
+                <Skills />
               </div>
               <div id="6">
                 <MobileHeaderChip
@@ -78,6 +78,6 @@ export default function DesktopAlignment(props) {
           )}
         </CardContent>
       </Card>
-    </Grid>
+    </React.Fragment>
   );
 }

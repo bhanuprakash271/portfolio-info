@@ -24,16 +24,14 @@ export default function Profile(props) {
     <Snackbar
       anchorOrigin={{ vertical, horizontal }}
       open={true}
-      style={{ width: "inherit", top: "0px", left: "0px", height:"-webkit-fill-available"}}
+      style={{ width: "inherit", top: "0px", left: "0px", height:"100vh"}}
       TransitionComponent={TransitionDown}
     >
       <Card
         variant="outlined"
         sx={{
           backgroundColor: "lightblue",
-          margin: "5px",
-          borderRadius: "10px",
-          height:"-webkit-fill-available"
+          height:"100vh"
         }}
       >
         <CardContent>

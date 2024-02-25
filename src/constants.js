@@ -5,7 +5,6 @@ import PriyaProfile from "./images/PriyaProfile.jpg";
 import ReethikaProfile from "./images/ReethikaProfile.jpg";
 import SrinandanProfile from "./images/SrinandanProfile.jpg";
 
-
 export const description =
   "Having accumulated more than four years of professional experience as a proficient Full-Stack developer, I have dedicated myself to refining my skills in developing advanced and engaging user interfaces for web applications. My technical proficiency encompasses a range of technologies, including React JS, Redux, Java, Angular JS, MySQL, and Node JS. Leveraging this expertise, I have successfully delivered exceptional projects that align with the requirements and expectations of clients and end-users. Throughout my journey, I have gained valuable insights into the practicality and functionality of real-world applications, enabling me to comprehend the challenges that emerge during software development when faced with specific project requirements.";
 export const skillIcons = [
@@ -78,7 +77,7 @@ export const courseWork = [
   "Operating Systems and File System Forensics",
   "Cyber Operations Lab",
   "Computer Forensics II",
-  "Computer Vision"
+  "Computer Vision",
 ];
 
 export const universityLinks = {
@@ -93,20 +92,6 @@ export const recommendations = [
   //   position: "AWS Solutions Architect",
   //   linkedin: "http://www.linkedin.com/in/jaswanthmanimala",
   //   profileImg:JaswanthProfile
-  // },
-  {
-    text: `Bhanu is a coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions. His code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, he demonstrates mastery, innovating with flair. A true technophile, excels in the art of programming.`,
-    by: "Sai Charan Reddy Pannala",
-    position: "Graduate Teaching Assistant @ UCF",
-    linkedin: "https://www.linkedin.com/in/saicharan0312/",
-    profileImg:CharanProfile
-  },
-  // {
-  //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
-  //   by: "Vamshee Priya",
-  //   position: "Sofware Engineer Intern @ Motorola Solutions",
-  //   linkedin: "https://www.linkedin.com/in/vamsheepriya/",
-  //   profileImg:PriyaProfile
   // },
   // {
   //   text: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.-1`,
@@ -127,14 +112,29 @@ export const recommendations = [
     by: "Srinandan Komanduri",
     position: "Lead Full Stack Developer @ BNY Mellon",
     linkedin: "https://www.linkedin.com/in/keidakira/",
-    profileImg:SrinandanProfile
+    profileImg: SrinandanProfile,
   },
+  {
+    text: `Bhanu is a coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions. 
+    His code dances elegantly, merging logic and creativity to craft seamless user experiences. A true technophile, excels in the art of programming.`,
+    by: "Vamshee Priya",
+    position: "Sofware Engineer @ Motorola Solutions",
+    linkedin: "https://www.linkedin.com/in/vamsheepriya/",
+    profileImg: PriyaProfile
+  },
+  // {
+  //   text: `Bhanu is a coding virtuoso, adept in JavaScript, effortlessly constructs intricate digital solutions. His code dances elegantly, merging logic and creativity to craft seamless user experiences. With every line, he demonstrates mastery, innovating with flair. A true technophile, excels in the art of programming.`,
+  //   by: "Sai Charan Reddy Pannala",
+  //   position: "Graduate Teaching Assistant @ UCF",
+  //   linkedin: "https://www.linkedin.com/in/saicharan0312/",
+  //   profileImg: CharanProfile,
+  // },
 ];
 
 export const projectContent = [
   {
     title: "Academy Application",
-    skills: ["React JS", "Java", "MySql", "GraphQl", "Express JS"],
+    skills: ["React JS", "Java", "MySql", "GraphQl", "Express JS", ],
     description: `Academy is an application that deals with tracking and assigning a variety of courses for associates by Academic trainers. On completion of specific courses by the associates and also considering their performance, badges will be awarded to the associates.`,
     github: "",
   },
@@ -143,7 +143,7 @@ export const projectContent = [
     skills: [
       "React JS",
       "Java",
-      "MySql",
+      "Hibernate",
       "Redux",
       "Node JS",
       "Spring boot",
@@ -154,7 +154,7 @@ export const projectContent = [
   },
   {
     title: "Cache Simulator",
-    skills: ["Java","React JS","Chart JS"],
+    skills: ["Java", "React JS", "Chart JS"],
     description: `To analyze and compare the performance, area, and energy of different memory hierarchy configurations using a subset of the SPEC2000 benchmark suite, I created a Java application that implements a flexible cache and memory hierarchy simulator with various cache replacement policies such as LRU, Pseudo-LRU, Optimal policy, and FIFO`,
     github: "https://github.com/bhanuprakash271/Architecture",
   },
@@ -173,9 +173,14 @@ export const experience = [
     position: "Software Engineer",
     location: "Chennai",
     description: [
-      "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
-      "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
-      `Developed API services in Node JS using GraphQL to store and fetch data from MySql DB.`,
+      // "Responsible for handling Pathways application that dealt with the development of user interface designs, managing & handling the data using redux & local/session storage, and service calls to store data by employing Java, Angular JS, and Rest API.",
+      // "Developed Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
+      // `Developed API services in Node JS using GraphQL to store and fetch data from MySql DB.`,
+      "Built user interface with React JS, MUI, and Redux, while implementing backend services composed in Java.",
+      "Handled Pathways application that dealt with the development of user interface designs, managing & handling the  data using local/session storage, and service calls to store data by employing Java, Angular, and Rest API.",
+      "Completed and launched the Subzero Admin application within a remarkable 2-month timeline, saving 50% in both time and project costs compared to the initially estimated 4-month duration.",
+      "Implemented API services in Node JS using graphql to store and fetch data from MySql DB. Developed Restful Web services utilizing the Springboot, and Hibernate frameworks, focusing on efficient backend functionality.",
+      "Created Subzero Admin application with both Mobile and Desktop Compatibilities and integrated it with a service to synchronize data from 3PI applications.",
     ],
   },
   {
@@ -184,10 +189,15 @@ export const experience = [
     position: "Software Engineer",
     location: "Hyderabad",
     description: [
-      "Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.",
-      "Built user interface with React JS and Redux, while implementing backend services developed in Java.",
+      // "Designed a data pipeline for the user to perform modifications in the database while integrating Academy and Badge applications involving tracking and assigning compliance codes and ethics for associates.",
+      // "Built user interface with React JS and Redux, while implementing backend services developed in Java.",
+      // "Actively participated in Scrum calls with business analysts to decipher the requirements and identify key areas for improvement to enhance user experience further.",
+      // "Employed Express JS, and GraphQL to help develop and manage the Academy application efficiently.",
+      "Designed a data pipeline for the user to perform modifications in the database while integrating two applications namely Academy and Badge involving tracking and assigning compliance codes and ethics for associates.",
+      "Skilled in writing complex queries, and aggregations, and utilizing MongoDB's unique features to ensure efficient and scalable data storage and retrieval.",
+      "Engineered and implemented Express JS and GraphQL technologies to streamline the development of the Academy application, resulting in a 30% faster loading time and a 25% increase in user engagement.",
       "Actively participated in Scrum calls with business analysts to decipher the requirements and identify key areas for improvement to enhance user experience further.",
-      "Employed Express JS, and GraphQL to help develop and manage the Academy application efficiently.",
+      `Utilized Docker and AWS to deploy the application successfully on 3 different environments. Successfully integrated and customized features like SearchSelect (React-Select) making the search functionality faster by 20%.`,
     ],
   },
   {
@@ -198,9 +208,8 @@ export const experience = [
     description: [
       //"Offered guidance to students on Database Concepts, Web-Based Information Technology, and Programming in C, conducted in-person lab sessions, and proctored exams.",
       //"Graded assignments, projects, midterms, and final exams for a class of 200 students while assisting professors in course management.",
-      "As a GTA, I have provided mentorship to students involved in crafting web application projects utilizing React JS, HTML, and CSS.",
-      "Additionally, I offered support and guidance on MySQL server database principles, Web-Based Information Technology, and C programming. This included conducting in-person lab sessions and overseeing exam proctoring.",
+      "Served as a mentor for more than 200 students engaged in developing web application projects utilizing React JS, HTML, and CSS.",
+      "Offered guidance to students on MySQL server database concepts, Web-Based Information Technology, and Programming in C, conducted 4 in-person lab sessions each week, and proctored exams.",
     ],
   },
-
 ];

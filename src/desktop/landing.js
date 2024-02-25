@@ -4,8 +4,8 @@ import { socialLinks } from "./../constants";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import Fab from "@mui/material/Fab";
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import Navigate from "./navigate";
 import Profile from "./profile";
 import NavigateCard from "./navigateCard";
@@ -13,6 +13,7 @@ import { isMobile } from "react-device-detect";
 import DesktopAlignment from "./desktopAlignment";
 import MobileAlignment from "./mobileAlignment";
 import QRCode from "./qrcode";
+import Stack from '@mui/material/Stack';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -99,7 +100,7 @@ export default function LandingPage() {
         onClose={() => {
           handleSnackBarClose();
         }}
-        anchorOrigin={{ vertical:'top', horizontal:'center' }}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
         <Alert
           onClose={() => {
@@ -125,40 +126,53 @@ export default function LandingPage() {
         {isMobile ? (
           <MobileAlignment handleSocialIconClick={handleSocialIcon} />
         ) : (
-          <DesktopAlignment
-            verticalView={verticalView}
-            activateSectionNbr={activateSectionNbr}
-          />
+          <Grid xs>
+              <DesktopAlignment
+                verticalView={verticalView}
+                activateSectionNbr={activateSectionNbr}
+              />
+          </Grid>
         )}
       </Grid>
 
       {!floatingNavigation && (
-        <NavigateCard
-          handleSectionNbr={handleSectionNbr}
-          activateSectionNbr={activateSectionNbr}
-        />
-      )}
+                  <NavigateCard
+                    handleSectionNbr={handleSectionNbr}
+                    activateSectionNbr={activateSectionNbr}
+                  />
+              )}
 
       {floatingNavigation ? (
         <React.Fragment>
-            <Navigate handleMenu={closeMenu} handleMenuCard={handleCard} showMenu={showMenu}/>
+          <Navigate
+            handleMenu={closeMenu}
+            handleMenuCard={handleCard}
+            showMenu={showMenu}
+          />
           <Fab
             color="primary"
             aria-label="add"
             style={{
               position: "fixed",
-              top: "50px",
+              top: "25px",
               right: "5%",
               left: "auto",
-              textTransform: "capitalize",
-              fontFamily: `'jost', sans-serif`,
+              width: "50px",
+              height: "50px",
             }}
             onClick={() => {
               showMenu ? closeMenu() : openMenu();
             }}
           >
-            {showMenu ? <KeyboardDoubleArrowUpIcon sx={{ width: "30px", height: "30px" }} /> : 
-            <KeyboardDoubleArrowDownIcon sx={{ width: "30px", height: "30px" }} />}
+            {showMenu ? (
+              <KeyboardDoubleArrowUpIcon
+                sx={{ width: "30px", height: "30px" }}
+              />
+            ) : (
+              <KeyboardDoubleArrowDownIcon
+                sx={{ width: "30px", height: "30px" }}
+              />
+            )}
           </Fab>
         </React.Fragment>
       ) : null}
@@ -177,7 +191,7 @@ export default function LandingPage() {
             textTransform: "capitalize",
             fontFamily: `'jost', sans-serif`,
             width: "100px",
-            backgroundColor:'teal'
+            backgroundColor: "teal",
           }}
           onClick={() => {
             openQR();

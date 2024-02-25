@@ -83,7 +83,7 @@ export default function Experience() {
                           cursor: "pointer",
                         }}
                       />
-                      <Typography sx={{ fontFamily: `'jost', sans-serif` }}>
+                      <Typography sx={{ fontFamily: `'jost', sans-serif`, margin:"3px" }}>
                         {item.year}
                       </Typography>
                     </Paper>

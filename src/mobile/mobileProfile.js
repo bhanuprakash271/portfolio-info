@@ -71,8 +71,8 @@ export default function MobileProfile() {
           <Grid
             container
             direction="row"
-            justifyContent="flex-start"
-            alignItems="flex-start"
+            justifyContent="center"
+            alignItems="center"
           >
             <Grid xs={12}>
               <Typography
@@ -80,6 +80,7 @@ export default function MobileProfile() {
                   fontSize: "25px",
                   fontWeight: "bold",
                   margin: "10px",
+                  marginLeft:"10px",
                   fontFamily: `'jost', sans-serif`,
                 }}
               >
@@ -98,7 +99,7 @@ export default function MobileProfile() {
               height: "80%",
               objectFit: "contain",
               objectPosition: "bottom",
-              width: "50%",
+              width: "70%",
             }}
           />
         </Grid>
